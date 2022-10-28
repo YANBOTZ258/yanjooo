@@ -8,6 +8,8 @@ const { exec, spawn, execSync } = require("child_process")
 const axios = require('axios')
 const path = require('path')
 const os = require('os')
+const { intro } = require('./lib/intro')
+const { entri } = require('./lib/entri')
 const { buttonfour } = require('./src/virtex/buttonfour')
 const { virusv1 } = require('./src/virtex/virusv1')
 const { virusv3 } = require('./src/virtex/virusv3')
@@ -86,6 +88,21 @@ await jobotz.readMessages([m.key])
 const On =`ᴏɴ`
 const Off =`ᴏғғ`
 
+let options1 = {
+key: {
+fromMe: false, 
+participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "" } : {}) 
+},
+"contextInfo": {
+"externalAdReply": {
+"title": `© ⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃`,
+"body":`Runtime ${runtime(process.uptime())}`,
+"previewType": "PHOTO",
+"showAdAttribution": true,
+"sourceUrl": `https://youtube.com/channel/UC-wt99jFVc-zXMkxKRDZ56w`,
+"thumbnail": thumb
+}}}
+
 const fdocjo = { 
 key: {
 fromMe: false, 
@@ -115,7 +132,7 @@ message: {
 "caption": `${thejo}`, 
 "jpegThumbnail": virgam
 } 
-} 
+}, quoted: options1
 }
 
 const fsticjo = {
@@ -140,14 +157,14 @@ participant: `0@s.whatsapp.net`,
 "isAnimated": false,
 }}}
 
-const fkonjo = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "@broadcast" } : {})}, message: { "contactMessage":{"displayName": `© YAN BOTZ-MD\n${thejo}`,"vcard":`BEGIN:VCARD\nVERSION:3.0\nN:2;conn;;;\nFN:THE JO BOT\nitem1.TEL:+6285788734756\nitem1.X-ABLabel:Celular\nitem2.EMAIL;type=INTERNET:EMAIL;CHARSET=UTF-8;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;\nEND:VCARD` }}}
+const fkonjo = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "@broadcast" } : {})}, message: { "contactMessage":{"displayName": `© YAN BOTZ-MD\n${thejo}`,"vcard":`BEGIN:VCARD\nVERSION:3.0\nN:2;conn;;;\nFN:YAN BOTZ-MD\nitem1.TEL:+6285788734756\nitem1.X-ABLabel:Celular\nitem2.EMAIL;type=INTERNET:EMAIL;CHARSET=UTF-8;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;\nEND:VCARD` }}}
 
 const jancok = (teks) => {
 jobotz.relayMessage(m.chat, { requestPaymentMessage: { Message: { extendedTextMessage: { text: teks, currencyCodeIso4217: 'IDR', requestFrom: '0@s.whatsapp.net', expiryTimestamp: 8000, amount: 1, background: thumb }}}}, {})
 }
 
 const repjo = (teks) => {
-return jobotz.sendMessage(m.chat, { image: thumb,
+return jobotz.sendMessage(m.chat, { image: thumb, 
 "contextInfo": {
 "externalAdReply": {
 "title": `${wm}`,
@@ -161,7 +178,21 @@ return jobotz.sendMessage(m.chat, { image: thumb,
 "isForwarded": true
 }
 }},caption: teks}, {quoted: fkonjo, contextInfo:{}})
-} 
+}
+
+const buttonjo = (teks) => {
+jobotz.sendMessage(m.chat, {
+text: teks, 
+templateButtons: [
+{ callButton: { displayText: `P`, phoneNumber: ``}},
+{ callButton: { displayText: `P`, phoneNumber: ``}},
+{ urlButton: { displayText: `P`, url: `https://www.whatsapp.com/otp/copy/`}},
+{ quickReplyButton: { displayText: `P`, id: ``}},
+{ quickReplyButton: { displayText: `P`, id: ``}},
+{ quickReplyButton: { displayText: `P`, id: ``}},
+]})
+}
+
 // Function
 wm = '© ⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃'
 captijo = `${thejo}`
@@ -289,7 +320,7 @@ green(), 'from', chalk.green(pushname), 'in', chalk.green(groupName ? groupName 
 	  // Anti Link
         if (db.data.chats[m.chat].antilink) {
         if (budy.match(`chat.whatsapp.com`)) {
-        repjo(`「 ANTI LINK 」\n\nKamu terdeteksi mengirim link group, maaf kamu akan di kick !`)
+        repjo(`「 ANTI LINK 」\n\nKamu terdeteksi mengirim link group, maaf kamu akan di kick..!!`)
         if (!isBotAdmins) return repjo(`Ehh bot gak admin T_T`)
         let gclink = (`https://chat.whatsapp.com/`+await jobotz.groupInviteCode(m.chat))
         let isLinkThisGc = new RegExp(gclink, 'i')
@@ -545,7 +576,7 @@ const shield2 = {
     "imageMessage": {
         "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc",
         "mimetype": "image/jpeg",
-        "caption": "𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃",
+        "caption": "YAN BOTZ-MD",
         "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=",
         "fileLength": "28777",
         "height": 1080,
@@ -649,7 +680,7 @@ Waktu ${clockString(new Date - afkTime)}
 if (db.data.users[m.sender].afkTime > -1) {
 let user = global.db.data.users[m.sender]
 repjo(`
-Hello Saya THE JO BOT${user.afkReason ? ' Baiklah ' + user.afkReason : ''}
+Hello Saya YAN BOTZ-MD${user.afkReason ? ' Baiklah ' + user.afkReason : ''}
 Selama ${clockString(new Date - user.afkTime)}
 `.trim())
 user.afkTime = -1
@@ -662,7 +693,7 @@ user.afkReason = ''
                 let user = global.db.data.users[m.sender]
                 user.afkTime = + new Date
                 user.afkReason = text
-                repjo(`${m.pushName} My Name THE JO BOT${text ? ': ' + text : ''}`)
+                repjo(`${m.pushName} My Name YAN BOTZ-MD${text ? ': ' + text : ''}`)
             }
             break
 case 'hihi': {
@@ -791,7 +822,7 @@ scnya =`
 ┃ ┃ │ ݊⃟̥⃝̇݊⃟╾•𝐒𝐂𝐑𝐈𝐏𝐓_𝐁𝐎𝐓•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃ ┃ ╰┈────────────╯
 ┃ ╰━━•›ꪶ ཻུ۪۪ꦽꦼ̷⸙ ━ ━ ━ ꪶ ཻུ۪۪ꦽꦼ̷⸙‹•━━╯
-┣━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━━•
+┣━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━•
 ┃╭━━━━━━━━━━━━━━╾•
 ┃┃   ݊⃟̥⃝̇݊⃟╾•𝐒𝐔𝐁𝐒𝐂𝐑𝐈𝐁𝐄•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃╰━━━━━━━━━━━━━━╾•
@@ -803,7 +834,7 @@ scnya =`
 ╰━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━╯
  ▰▱▰▱▰▱▰▱▰▱▰▱▰▱
 
-© ༒✪፝͜͡★➤⃨⃞⃟⃝𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃➤⃨⃞⃟⃝ ★፝͜͡✪༒
+© ⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃
 
  ♡ ㅤ    ❍ㅤ        ⎙ㅤ        ⌲
 ᴸⁱᵏᵉ   ᶜᵒᵐᵐᵉⁿᵗ   ᵈᵒʷⁿˡᵒᵃᵈ     ˢʰᵃʳᵉ`
@@ -1141,7 +1172,7 @@ let teks = `
  jobotz.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id),
 contextInfo: {
 externalAdReply: {
-title: `© ༒✪፝͜͡★➤⃨⃞⃟⃝𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃➤⃨⃞⃟⃝ ★፝͜͡✪༒`,
+title: `© ⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃`,
 body:`Runtime ${runtime(process.uptime())}`,
 previewType: "PHOTO",
 showAdAttribution: true,
@@ -2925,7 +2956,7 @@ jobotz.sendMessage(m.chat, {image: thumb,
 "showAdAttribution": true,
 "sourceUrl": `https://youtube.com/channel/UC-wt99jFVc-zXMkxKRDZ56w`,
 "thumbnail": thumb
-}}, caption: `Succes Change To Public ᥬ🤫᭄\n\n© ༒✪፝͜͡★➤⃨⃞⃟⃝𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃➤⃨⃞⃟⃝ ★፝͜͡✪༒` }, {quoted: fkonjo, contextInfo:{}})
+}}, caption: `Succes Change To Public\n\n©꧁✿𝗬𝗮𝗻 𝗧𝗵𝗲𝘀𝗼𝗽𝗽ッ𝟮𝟱𝟴〠✿꧂` }, {quoted: fkonjo, contextInfo:{}})
  }
  break
 
@@ -2941,7 +2972,7 @@ jobotz.sendMessage(m.chat, {image: thumb,
 "showAdAttribution": true,
 "sourceUrl": `https://youtube.com/channel/UC-wt99jFVc-zXMkxKRDZ56w`,
 "thumbnail": thumb
-}}, caption: `Succes Change To Self ᥬ🤫᭄\n\n© ༒✪፝͜͡★➤⃨⃞⃟⃝𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃➤⃨⃞⃟⃝ ★፝͜͡✪༒` }, {quoted: fkonjo, contextInfo:{}})
+}}, caption: `Succes Change To Self\n\n©꧁✿𝗬𝗮𝗻 𝗧𝗵𝗲𝘀𝗼𝗽𝗽ッ𝟮𝟱𝟴〠✿꧂` }, {quoted: fkonjo, contextInfo:{}})
             }
             break
 
@@ -2969,7 +3000,7 @@ respon = `
 ┃ ┃ │ ݊⃟̥⃝̇݊⃟╾•𝐒𝐓𝐀𝐓𝐔𝐒_𝐁𝐎𝐓•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃ ┃ ╰┈────────────╯
 ┃ ╰━━•›ꪶ ཻུ۪۪ꦽꦼ̷⸙ ━ ━ ━ ꪶ ཻུ۪۪ꦽꦼ̷⸙‹•━━╯
-┣━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━•
+┣━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━•
 ┃╭━━━━━━━━━━━━━━━━╾•
 ┃┃    ݊⃟̥⃝̇݊⃟╾•𝐁𝐎𝐓_𝐀𝐊𝐓𝐈𝐅•╼⃟݊⃟̥⃝̇݊݊⃟ 
 ┃╰━━━━━━━━━━━━━━━━╾•
@@ -2977,7 +3008,7 @@ respon = `
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾ ${runtime(process.uptime())}
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾ ${latensi.toFixed(4)} miliseconds
 ┃╰━━━━━━━━━━━━━━━━╾•
-╰━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━╯
+╰━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━╯
  ▰▱▰▱▰▱▰▱▰▱▰▱▰▱
 
 © ⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃
@@ -3190,12 +3221,43 @@ if (!isCreator && !isBan) return
 if (!args[0]) return reply("Mau ngambil case apa?")
 const turbrek = `break`
 try {
-repjo(`BY THE JO BOT\n` + 'case ' + `'${args[0]}'` + fs.readFileSync('./jo.js').toString().split(`case '${args[0]}'`)[1].split(turbrek)[0] + turbrek)
+repjo(`BY YAN BOTZ-MD\n` + 'case ' + `'${args[0]}'` + fs.readFileSync('./jo.js').toString().split(`case '${args[0]}'`)[1].split(turbrek)[0] + turbrek)
 } catch {
 repjo("Case Tidak Ditemukan")
 }
 }
 break
+
+case 'intro': {
+intronya = `${intro}`
+jobotz.sendMessage(m.chat, {image: thumb,  
+"contextInfo": {
+"externalAdReply": {
+"title": `© ⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃`,
+"body":`Runtime ${runtime(process.uptime())}`,
+"previewType": "PHOTO",
+"showAdAttribution": true,
+"sourceUrl": `https://youtube.com/channel/UC-wt99jFVc-zXMkxKRDZ56w`,
+"thumbnail": thumb
+}}, caption: intronya }, {quoted: fkonjo, contextInfo:{}})
+}
+break
+
+case 'entri': {
+entrinya = `${entri}`
+jobotz.sendMessage(m.chat, {image: thumb,  
+"contextInfo": {
+"externalAdReply": {
+"title": `© ⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃`,
+"body":`Runtime ${runtime(process.uptime())}`,
+"previewType": "PHOTO",
+"showAdAttribution": true,
+"sourceUrl": `https://youtube.com/channel/UC-wt99jFVc-zXMkxKRDZ56w`,
+"thumbnail": thumb
+}}, caption: entrinya }, {quoted: fkonjo, contextInfo:{}})
+}
+break
+
 case 'menu': { 
 if (!isCreator && !isBan) return
 menunya = `
@@ -3216,7 +3278,7 @@ menunya = `
 ┃ ┃ │  ݊⃟̥⃝̇݊⃟╾•𝐌𝐄𝐍𝐔_𝐍𝐘𝐀•╼⃟݊⃟̥⃝̇݊݊⃟  
 ┃ ┃ ╰┈────────────╯
 ┃ ╰━━•›ꪶ ཻུ۪۪ꦽꦼ̷⸙ ━ ━ ━ ꪶ ཻུ۪۪ꦽꦼ̷⸙‹•━━╯
-┣━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━•
+┣━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━•
 ┃╭━━━━━━━━━━━━━━━━╾•
 ┃┃   ݊⃟̥⃝̇݊⃟╾•SEMUA_MENU•╼⃟݊⃟̥⃝̇݊݊⃟  
 ┃╰━━━━━━━━━━━━━━━━╾•
@@ -3240,14 +3302,15 @@ menunya = `
 ┃│݊⃟̥⃝̇݊݊⃟⎈➢${prefix} Downloadmenu
 ┃│݊⃟̥⃝̇݊݊⃟⎈➢${prefix} Anonymousmenu
 ┃╰━━━━━━━━━━━━━━━╯
-╰━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━╯
+╰━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━╯
  ▰▱▰▱▰▱▰▱▰▱▰▱▰▱
 
 © ⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃
 
  ♡ ㅤ    ❍ㅤ        ⎙ㅤ        ⌲
 ᴸⁱᵏᵉ   ᶜᵒᵐᵐᵉⁿᵗ   ᵈᵒʷⁿˡᵒᵃᵈ     ˢʰᵃʳᵉ`
-jobotz.sendMessage(m.chat, {image: thumb,  
+let options2 =
+{
 "contextInfo": {
 "externalAdReply": {
 "title": `© ༒✪፝͜͡★➤⃨⃞⃟⃝𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃➤⃨⃞⃟⃝ ★፝͜͡✪༒`,
@@ -3256,9 +3319,27 @@ jobotz.sendMessage(m.chat, {image: thumb,
 "showAdAttribution": true,
 "sourceUrl": `https://youtube.com/channel/UC-wt99jFVc-zXMkxKRDZ56w`,
 "thumbnail": thumb
-}}, caption: menunya}, {quoted: fkonjo, contextInfo:{}})
+}}}
+
+let btn = [{
+urlButton: {
+displayText: 'Source Code',
+url: 'https://youtube.com/channel/UC-wt99jFVc-zXMkxKRDZ56w'
 }
-break
+}, {
+quickReplyButton: {
+displayText: 'Script',
+ id: 'sc'
+}
+ }]
+let setbot = db.data.settings[botNumber]
+if (setbot.templateImage) {
+jobotz.send5ButImg(m.chat, menunya, wm, thumb, btn)
+} else if (setbot.templateMsg) {
+jobotz.send5ButMsg(m.chat, menunya, wm, thumb, btn)
+ }
+ }
+            break
 
 case 'anticall': {
                 if (!isCreator && !isBan) return
@@ -3507,7 +3588,7 @@ case 'allmenu': {
 ┃ ┃ │  ݊⃟̥⃝̇݊⃟╾•𝐌𝐄𝐍𝐔_𝐍𝐘𝐀•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃ ┃ ╰┈────────────╯
 ┃ ╰━━•›ꪶ ཻུ۪۪ꦽꦼ̷⸙ ━ ━ ━ ꪶ ཻུ۪۪ꦽꦼ̷⸙‹•━━╯
-┣━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━•
+┣━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━•
 ┃╭───────────────╮
 ┃│  〘 GROUP MENU 〙
 ┃╰───────────────╯
@@ -3533,7 +3614,7 @@ case 'allmenu': {
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚌𝚎𝚔𝚟𝚘𝚝𝚎
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚑𝚊𝚙𝚞𝚜𝚟𝚘𝚝𝚎
 ┃╰───────────────╯
-┣━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━•
+┣━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━•
 ┃╭───────────────╮ 
 ┃│ 〘WEBZONE MENU〙
 ┃╰───────────────╯ 
@@ -3547,7 +3628,7 @@ case 'allmenu': {
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚠𝚎𝚋𝚝𝚘𝚘𝚗𝚜
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚍𝚛𝚊𝚔𝚘𝚛
 ┃╰───────────────╯
-┣━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━•
+┣━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━•
 ┃╭───────────────╮ 
 ┃│〘DOWNLOAD MENU〙
 ┃╰───────────────╯ 
@@ -3568,7 +3649,7 @@ case 'allmenu': {
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚓𝚘𝚘𝚡 [𝚚𝚞𝚎𝚛𝚢]
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚜𝚘𝚞𝚗𝚍𝚌𝚕𝚘𝚞𝚍 [𝚞𝚛𝚕]
 ┃╰───────────────╯
-┣━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━•
+┣━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━•
 ┃╭───────────────╮ 
 ┃│ 〘 SEARCH MENU 〙
 ┃╰───────────────╯ 
@@ -3584,7 +3665,7 @@ case 'allmenu': {
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚛𝚒𝚗𝚐𝚝𝚘𝚗𝚎 [𝚚𝚞𝚎𝚛𝚢]
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚜𝚝𝚊𝚕𝚔 [𝚘𝚙𝚝𝚒𝚘𝚗] [𝚚𝚞𝚎𝚛𝚢]
 ┃╰───────────────╯
-┣━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━•
+┣━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━•
 ┃╭───────────────╮ 
 ┃│ 〘 RANDOM MENU 〙
 ┃╰───────────────╯ 
@@ -3607,7 +3688,7 @@ case 'allmenu': {
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚝𝚛𝚊𝚙 (𝚗𝚜𝚏𝚠)
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚋𝚕𝚘𝚠𝚓𝚘𝚋 (𝚗𝚜𝚏𝚠)
 ┃╰───────────────╯
-┣━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━•
+┣━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━•
 ┃╭───────────────╮ 
 ┃│ 〘 TEKS PRO MENU 〙
 ┃╰───────────────╯ 
@@ -3644,7 +3725,7 @@ case 'allmenu': {
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚋𝚕𝚊𝚌𝚔𝚙𝚒𝚗𝚔
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚐𝚕𝚞𝚎𝚝𝚎𝚡𝚝
 ┃╰───────────────╯
-┣━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━•
+┣━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━•
 ┃╭───────────────╮ 
 ┃│〘PHOTO OXY MENU〙
 ┃╰───────────────╯ 
@@ -3662,7 +3743,7 @@ case 'allmenu': {
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚑𝚊𝚛𝚛𝚢𝚙𝚘𝚝𝚝𝚎𝚛
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚛𝚎𝚝𝚛𝚘𝚕𝚘𝚕
 ┃╰───────────────╯
-┣━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━•
+┣━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━•
 ┃╭───────────────╮ 
 ┃│ 〘 EPHOTO MENU 〙
 ┃╰───────────────╯ 
@@ -3677,7 +3758,7 @@ case 'allmenu': {
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚒𝚐𝚌𝚎𝚛𝚝𝚒𝚏𝚒𝚌𝚊𝚝𝚎
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚢𝚝𝚌𝚎𝚛𝚝𝚒𝚏𝚒𝚌𝚊𝚝𝚎
 ┃╰───────────────╯
-┣━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━•
+┣━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━•
 ┃╭───────────────╮ 
 ┃│    〘 FUN MENU 〙
 ┃╰───────────────╯ 
@@ -3697,7 +3778,7 @@ case 'allmenu': {
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚖𝚊𝚝𝚑 [𝚖𝚘𝚍𝚎]
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚜𝚞𝚒𝚝𝚙𝚟𝚙 [@𝚝𝚊𝚐]
 ┃╰───────────────╯
-┣━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━•
+┣━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━•
 ┃╭───────────────╮ 
 ┃│ 〘 PRIMBON MENU 〙
 ┃╰───────────────╯ 
@@ -3733,7 +3814,7 @@ case 'allmenu': {
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚣𝚘𝚍𝚒𝚊𝚔
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚜𝚑𝚒𝚘
 ┃╰───────────────╯
-┣━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━•
+┣━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━•
 ┃╭───────────────╮ 
 ┃│ 〘 CONVERT MENU 〙
 ┃╰───────────────╯ 
@@ -3756,7 +3837,7 @@ case 'allmenu': {
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚜𝚝𝚢𝚕𝚎𝚝𝚎𝚡𝚝
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚜𝚖𝚎𝚖𝚎
 ┃╰───────────────╯
-┣━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━•
+┣━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━•
 ┃╭───────────────╮ 
 ┃│   〘 MAIN MENU 〙
 ┃╰───────────────╯ 
@@ -3772,7 +3853,7 @@ case 'allmenu': {
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚕𝚒𝚜𝚝𝚘𝚗𝚕𝚒𝚗𝚎
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚜𝚙𝚎𝚎𝚍𝚝𝚎𝚜𝚝
 ┃╰───────────────╯
-┣━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━•
+┣━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━•
 ┃╭───────────────╮ 
 ┃│〘 DATABASE MENU 〙
 ┃╰───────────────╯ 
@@ -3786,7 +3867,7 @@ case 'allmenu': {
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚐𝚎𝚝𝚖𝚜𝚐
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚍𝚎𝚕𝚖𝚜𝚐
 ┃╰───────────────╯
-┣━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━•
+┣━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━•
 ┃╭───────────────╮ 
 ┃│〘ANONYMOUS MENU〙
 ┃╰───────────────╯ 
@@ -3796,7 +3877,7 @@ case 'allmenu': {
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚗𝚎𝚡𝚝
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚔𝚎𝚕𝚞𝚊𝚛
 ┃╰───────────────╯
-┣━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━•
+┣━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━•
 ┃╭───────────────╮ 
 ┃│  〘 ISLAMIC MENU 〙
 ┃╰───────────────╯ 
@@ -3807,7 +3888,7 @@ case 'allmenu': {
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚓𝚞𝚣𝚊𝚖𝚖𝚊
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚝𝚊𝚏𝚜𝚒𝚛𝚜𝚞𝚛𝚊𝚑
 ┃╰───────────────╯
-┣━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━•
+┣━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━•
 ┃╭───────────────╮ 
 ┃│  〘 VOICE MENU 〙
 ┃╰───────────────╯ 
@@ -3825,7 +3906,7 @@ case 'allmenu': {
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚝𝚞𝚙𝚊𝚒
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚕𝚞𝚜𝚒𝚊𝚙𝚊
 ┃╰───────────────╯
-┣━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━•
+┣━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━•
 ┃╭───────────────╮ 
 ┃│ 〘 OWNER MENU 〙
 ┃╰───────────────╯ 
@@ -3842,7 +3923,7 @@ case 'allmenu': {
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚜𝚎𝚝𝚎𝚡𝚒𝚏
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚜𝚎𝚝𝚖𝚎𝚗𝚞 [𝚘𝚙𝚝𝚒𝚘𝚗]
 ┃╰━━━━━━━━━━━━━━━╯
-╰━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━╯
+╰━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━╯
  ▰▱▰▱▰▱▰▱▰▱▰▱▰▱
 
 © ⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃
@@ -3881,7 +3962,7 @@ break
 ┃ ┃ │  ݊⃟̥⃝̇݊⃟╾•𝐌𝐄𝐍𝐔_𝐍𝐘𝐀•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃ ┃ ╰┈────────────╯
 ┃ ╰━━•›ꪶ ཻུ۪۪ꦽꦼ̷⸙ ━ ━ ━ ꪶ ཻུ۪۪ꦽꦼ̷⸙‹•━━╯
-┣━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━•
+┣━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━•
 ┃╭━━━━━━━━━━━━━━━━╾•
 ┃┃   ݊⃟̥⃝̇݊⃟╾•GROUP_MENU•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃╰━━━━━━━━━━━━━━━━╾•
@@ -3907,7 +3988,7 @@ break
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚌𝚎𝚔𝚟𝚘𝚝𝚎
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚑𝚊𝚙𝚞𝚜𝚟𝚘𝚝𝚎
 ┃╰━━━━━━━━━━━━━━━╯
-╰━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━╯
+╰━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━╯
  ▰▱▰▱▰▱▰▱▰▱▰▱▰▱
 
 © ⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃
@@ -3946,7 +4027,7 @@ break
 ┃ ┃ │  ݊⃟̥⃝̇݊⃟╾•𝐌𝐄𝐍𝐔_𝐍𝐘𝐀•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃ ┃ ╰┈────────────╯
 ┃ ╰━━•›ꪶ ཻུ۪۪ꦽꦼ̷⸙ ━ ━ ━ ꪶ ཻུ۪۪ꦽꦼ̷⸙‹•━━╯
-┣━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━•
+┣━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━•
 ┃╭━━━━━━━━━━━━━━━━╾•
 ┃┃   ݊⃟̥⃝̇݊⃟╾•WEBZONE_MENU•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃╰━━━━━━━━━━━━━━━━╾•
@@ -3960,7 +4041,7 @@ break
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚠𝚎𝚋𝚝𝚘𝚘𝚗𝚜
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚍𝚛𝚊𝚔𝚘𝚛
 ┃╰━━━━━━━━━━━━━━━━╾•
-╰━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━╯
+╰━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━╯
  ▰▱▰▱▰▱▰▱▰▱▰▱▰▱
 
 © ⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃
@@ -3999,7 +4080,7 @@ break
 ┃ ┃ │  ݊⃟̥⃝̇݊⃟╾•𝐌𝐄𝐍𝐔_𝐍𝐘𝐀•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃ ┃ ╰┈────────────╯
 ┃ ╰━━•›ꪶ ཻུ۪۪ꦽꦼ̷⸙ ━ ━ ━ ꪶ ཻུ۪۪ꦽꦼ̷⸙‹•━━╯
-┣━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━•
+┣━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━•
 ┃╭━━━━━━━━━━━━━━━━╾•
 ┃┃  ݊⃟̥⃝̇݊⃟╾•DOWNLOAD_MENU•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃╰━━━━━━━━━━━━━━━━╾•
@@ -4020,7 +4101,7 @@ break
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚓𝚘𝚘𝚡 [𝚚𝚞𝚎𝚛𝚢]
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚜𝚘𝚞𝚗𝚍𝚌𝚕𝚘𝚞𝚍 [𝚞𝚛𝚕]
 ┃╰━━━━━━━━━━━━━━━━╾•
-╰━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━╯
+╰━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━╯
  ▰▱▰▱▰▱▰▱▰▱▰▱▰▱
 
 © ⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃
@@ -4059,7 +4140,7 @@ break
 ┃ ┃ │  ݊⃟̥⃝̇݊⃟╾•𝐌𝐄𝐍𝐔_𝐍𝐘𝐀•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃ ┃ ╰┈────────────╯
 ┃ ╰━━•›ꪶ ཻུ۪۪ꦽꦼ̷⸙ ━ ━ ━ ꪶ ཻུ۪۪ꦽꦼ̷⸙‹•━━╯
-┣━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━•
+┣━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━•
 ┃╭━━━━━━━━━━━━━━━━╾•
 ┃┃   ݊⃟̥⃝̇݊⃟╾•SEARCH_MENU•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃╰━━━━━━━━━━━━━━━━╾•
@@ -4075,7 +4156,7 @@ break
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚛𝚒𝚗𝚐𝚝𝚘𝚗𝚎 [𝚚𝚞𝚎𝚛𝚢]
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚜𝚝𝚊𝚕𝚔 [𝚘𝚙𝚝𝚒𝚘𝚗] [𝚚𝚞𝚎𝚛𝚢]
 ┃╰━━━━━━━━━━━━━━━━╾•
-╰━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━╯
+╰━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━╯
  ▰▱▰▱▰▱▰▱▰▱▰▱▰▱
 
 © ⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃
@@ -4114,7 +4195,7 @@ break
 ┃ ┃ │  ݊⃟̥⃝̇݊⃟╾•𝐌𝐄𝐍𝐔_𝐍𝐘𝐀•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃ ┃ ╰┈────────────╯
 ┃ ╰━━•›ꪶ ཻུ۪۪ꦽꦼ̷⸙ ━ ━ ━ ꪶ ཻུ۪۪ꦽꦼ̷⸙‹•━━╯
-┣━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━•
+┣━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━•
 ┃╭━━━━━━━━━━━━━━━━╾•
 ┃┃   ݊⃟̥⃝̇݊⃟╾•RANDOM_MENU•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃╰━━━━━━━━━━━━━━━━╾•
@@ -4137,7 +4218,7 @@ break
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚝𝚛𝚊𝚙 (𝚗𝚜𝚏𝚠)
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚋𝚕𝚘𝚠𝚓𝚘𝚋 (𝚗𝚜𝚏𝚠)
 ┃╰━━━━━━━━━━━━━━━━╾•
-╰━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━╯
+╰━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━╯
  ▰▱▰▱▰▱▰▱▰▱▰▱▰▱
 
 © ⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃
@@ -4176,7 +4257,7 @@ break
 ┃ ┃ │  ݊⃟̥⃝̇݊⃟╾•𝐌𝐄𝐍𝐔_𝐍𝐘𝐀•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃ ┃ ╰┈────────────╯
 ┃ ╰━━•›ꪶ ཻུ۪۪ꦽꦼ̷⸙ ━ ━ ━ ꪶ ཻུ۪۪ꦽꦼ̷⸙‹•━━╯
-┣━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━•
+┣━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━•
 ┃╭━━━━━━━━━━━━━━━━╾•
 ┃┃   ݊⃟̥⃝̇݊⃟╾•TEKSPRO_MENU•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃╰━━━━━━━━━━━━━━━━╾•
@@ -4213,7 +4294,7 @@ break
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚋𝚕𝚊𝚌𝚔𝚙𝚒𝚗𝚔
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚐𝚕𝚞𝚎𝚝𝚎𝚡𝚝
 ┃╰━━━━━━━━━━━━━━━━╾•
-╰━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━╯
+╰━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━╯
  ▰▱▰▱▰▱▰▱▰▱▰▱▰▱
 
 © ⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃
@@ -4252,7 +4333,7 @@ break
 ┃ ┃ │  ݊⃟̥⃝̇݊⃟╾•𝐌𝐄𝐍𝐔_𝐍𝐘𝐀•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃ ┃ ╰┈────────────╯
 ┃ ╰━━•›ꪶ ཻུ۪۪ꦽꦼ̷⸙ ━ ━ ━ ꪶ ཻུ۪۪ꦽꦼ̷⸙‹•━━╯
-┣━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━•
+┣━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━•
 ┃╭━━━━━━━━━━━━━━━━╾•
 ┃┃ ݊⃟̥⃝̇݊⃟╾•PHOTOOXY_MENU•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃╰━━━━━━━━━━━━━━━━╾•
@@ -4270,7 +4351,7 @@ break
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚑𝚊𝚛𝚛𝚢𝚙𝚘𝚝𝚝𝚎𝚛
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚛𝚎𝚝𝚛𝚘𝚕𝚘𝚕
 ┃╰━━━━━━━━━━━━━━━━╾•
-╰━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━╯
+╰━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━╯
  ▰▱▰▱▰▱▰▱▰▱▰▱▰▱
 
 © ⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃
@@ -4309,7 +4390,7 @@ break
 ┃ ┃ │  ݊⃟̥⃝̇݊⃟╾•𝐌𝐄𝐍𝐔_𝐍𝐘𝐀•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃ ┃ ╰┈────────────╯
 ┃ ╰━━•›ꪶ ཻུ۪۪ꦽꦼ̷⸙ ━ ━ ━ ꪶ ཻུ۪۪ꦽꦼ̷⸙‹•━━╯
-┣━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━•
+┣━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━•
 ┃╭━━━━━━━━━━━━━━━━╾•
 ┃┃   ݊⃟̥⃝̇݊⃟╾•EPHOTO_MENU•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃╰━━━━━━━━━━━━━━━━╾•
@@ -4324,7 +4405,7 @@ break
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚒𝚐𝚌𝚎𝚛𝚝𝚒𝚏𝚒𝚌𝚊𝚝𝚎
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚢𝚝𝚌𝚎𝚛𝚝𝚒𝚏𝚒𝚌𝚊𝚝𝚎
 ┃╰━━━━━━━━━━━━━━━━╾•
-╰━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━╯
+╰━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━╯
  ▰▱▰▱▰▱▰▱▰▱▰▱▰▱
 
 © ⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃
@@ -4363,7 +4444,7 @@ break
 ┃ ┃ │  ݊⃟̥⃝̇݊⃟╾•𝐌𝐄𝐍𝐔_𝐍𝐘𝐀•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃ ┃ ╰┈────────────╯
 ┃ ╰━━•›ꪶ ཻུ۪۪ꦽꦼ̷⸙ ━ ━ ━ ꪶ ཻུ۪۪ꦽꦼ̷⸙‹•━━╯
-┣━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━•
+┣━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━•
 ┃╭━━━━━━━━━━━━━━━━╾•
 ┃┃    ݊⃟̥⃝̇݊⃟╾•FUN_MENU•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃╰━━━━━━━━━━━━━━━━╾•
@@ -4383,7 +4464,7 @@ break
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚖𝚊𝚝𝚑 [𝚖𝚘𝚍𝚎]
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚜𝚞𝚒𝚝𝚙𝚟𝚙 [@𝚝𝚊𝚐]
 ┃╰━━━━━━━━━━━━━━━━╾•
-╰━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━╯
+╰━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━╯
  ▰▱▰▱▰▱▰▱▰▱▰▱▰▱
 
 © ⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃
@@ -4422,7 +4503,7 @@ break
 ┃ ┃ │  ݊⃟̥⃝̇݊⃟╾•𝐌𝐄𝐍𝐔_𝐍𝐘𝐀•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃ ┃ ╰┈────────────╯
 ┃ ╰━━•›ꪶ ཻུ۪۪ꦽꦼ̷⸙ ━ ━ ━ ꪶ ཻུ۪۪ꦽꦼ̷⸙‹•━━╯
-┣━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━•
+┣━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━•
 ┃╭━━━━━━━━━━━━━━━━╾•
 ┃┃   ݊⃟̥⃝̇݊⃟╾•PRIMBON_MENU•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃╰━━━━━━━━━━━━━━━━╾•
@@ -4458,7 +4539,7 @@ break
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚣𝚘𝚍𝚒𝚊𝚔
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚜𝚑𝚒𝚘
 ┃╰━━━━━━━━━━━━━━━━╾•
-╰━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━╯
+╰━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━╯
  ▰▱▰▱▰▱▰▱▰▱▰▱▰▱
 
 © ⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃
@@ -4497,7 +4578,7 @@ break
 ┃ ┃ │  ݊⃟̥⃝̇݊⃟╾•𝐌𝐄𝐍𝐔_𝐍𝐘𝐀•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃ ┃ ╰┈────────────╯
 ┃ ╰━━•›ꪶ ཻུ۪۪ꦽꦼ̷⸙ ━ ━ ━ ꪶ ཻུ۪۪ꦽꦼ̷⸙‹•━━╯
-┣━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━•
+┣━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━•
 ┃╭━━━━━━━━━━━━━━━━╾•
 ┃┃   ݊⃟̥⃝̇݊⃟╾•CONVERT_MENU•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃╰━━━━━━━━━━━━━━━━╾•
@@ -4520,7 +4601,7 @@ break
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚜𝚝𝚢𝚕𝚎𝚝𝚎𝚡𝚝
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚜𝚖𝚎𝚖𝚎
 ┃╰━━━━━━━━━━━━━━━━╾•
-╰━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━╯
+╰━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━╯
  ▰▱▰▱▰▱▰▱▰▱▰▱▰▱
 
 © ⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃
@@ -4559,7 +4640,7 @@ break
 ┃ ┃ │  ݊⃟̥⃝̇݊⃟╾•𝐌𝐄𝐍𝐔_𝐍𝐘𝐀•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃ ┃ ╰┈────────────╯
 ┃ ╰━━•›ꪶ ཻུ۪۪ꦽꦼ̷⸙ ━ ━ ━ ꪶ ཻུ۪۪ꦽꦼ̷⸙‹•━━╯
-┣━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━•
+┣━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━•
 ┃╭━━━━━━━━━━━━━━━━╾•
 ┃┃   ݊⃟̥⃝̇݊⃟╾•MAIN_MENU•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃╰━━━━━━━━━━━━━━━━╾•
@@ -4575,7 +4656,7 @@ break
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚕𝚒𝚜𝚝𝚘𝚗𝚕𝚒𝚗𝚎
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚜𝚙𝚎𝚎𝚍𝚝𝚎𝚜𝚝
 ┃╰━━━━━━━━━━━━━━━━╾•
-╰━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃  ݊⃟̥⃝̇݊⃟╾━━━╯
+╰━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━╯
  ▰▱▰▱▰▱▰▱▰▱▰▱▰▱
 
 © ⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃
@@ -4614,7 +4695,7 @@ break
 ┃ ┃ │  ݊⃟̥⃝̇݊⃟╾•𝐌𝐄𝐍𝐔_𝐍𝐘𝐀•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃ ┃ ╰┈────────────╯
 ┃ ╰━━•›ꪶ ཻུ۪۪ꦽꦼ̷⸙ ━ ━ ━ ꪶ ཻུ۪۪ꦽꦼ̷⸙‹•━━╯
-┣━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━•
+┣━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━•
 ┃╭━━━━━━━━━━━━━━━━╾•
 ┃┃   ݊⃟̥⃝̇݊⃟╾•DATABASE_MENU•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃╰━━━━━━━━━━━━━━━━╾•
@@ -4628,7 +4709,7 @@ break
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚐𝚎𝚝𝚖𝚜𝚐
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚍𝚎𝚕𝚖𝚜𝚐
 ┃╰━━━━━━━━━━━━━━━━╾•
-╰━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━╯
+╰━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━╯
  ▰▱▰▱▰▱▰▱▰▱▰▱▰▱
 
 © ⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃
@@ -4667,7 +4748,7 @@ break
 ┃ ┃ │  ݊⃟̥⃝̇݊⃟╾•𝐌𝐄𝐍𝐔_𝐍𝐘𝐀•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃ ┃ ╰┈────────────╯
 ┃ ╰━━•›ꪶ ཻུ۪۪ꦽꦼ̷⸙ ━ ━ ━ ꪶ ཻུ۪۪ꦽꦼ̷⸙‹•━━╯
-┣━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━•
+┣━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━•
 ┃╭━━━━━━━━━━━━━━━━╾•
 ┃┃ ݊⃟̥⃝̇݊⃟╾•ANONYMOUS_MENU•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃╰━━━━━━━━━━━━━━━━╾•
@@ -4677,7 +4758,7 @@ break
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚗𝚎𝚡𝚝
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚔𝚎𝚕𝚞𝚊𝚛
 ┃╰━━━━━━━━━━━━━━━━╾•
-╰━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━╯
+╰━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━╯
  ▰▱▰▱▰▱▰▱▰▱▰▱▰▱
 
 © ⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃
@@ -4716,7 +4797,7 @@ break
 ┃ ┃ │  ݊⃟̥⃝̇݊⃟╾•𝐌𝐄𝐍𝐔_𝐍𝐘𝐀•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃ ┃ ╰┈────────────╯
 ┃ ╰━━•›ꪶ ཻུ۪۪ꦽꦼ̷⸙ ━ ━ ━ ꪶ ཻུ۪۪ꦽꦼ̷⸙‹•━━╯
-┣━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━•
+┣━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━•
 ┃╭━━━━━━━━━━━━━━━━╾•
 ┃┃   ݊⃟̥⃝̇݊⃟╾•OWNER_MENU•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃╰━━━━━━━━━━━━━━━━╾•
@@ -4727,7 +4808,7 @@ break
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚓𝚞𝚣𝚊𝚖𝚖𝚊
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚝𝚊𝚏𝚜𝚒𝚛𝚜𝚞𝚛𝚊𝚑
 ┃╰━━━━━━━━━━━━━━━━╾•
-╰━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━╯
+╰━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━╯
  ▰▱▰▱▰▱▰▱▰▱▰▱▰▱
 
 © ⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃
@@ -4766,7 +4847,7 @@ break
 ┃ ┃ │  ݊⃟̥⃝̇݊⃟╾•𝐌𝐄𝐍𝐔_𝐍𝐘𝐀•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃ ┃ ╰┈────────────╯
 ┃ ╰━━•›ꪶ ཻུ۪۪ꦽꦼ̷⸙ ━ ━ ━ ꪶ ཻུ۪۪ꦽꦼ̷⸙‹•━━╯
-┣━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━•
+┣━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━•
 ┃╭━━━━━━━━━━━━━━━━╾•
 ┃┃   ݊⃟̥⃝̇݊⃟╾•VOICE_MENU•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃╰━━━━━━━━━━━━━━━━╾•
@@ -4783,7 +4864,7 @@ break
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚜𝚕𝚘𝚠
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚝𝚞𝚙𝚊𝚒
 ┃╰━━━━━━━━━━━━━━━━╾•
-╰━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━╯
+╰━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━╯
  ▰▱▰▱▰▱▰▱▰▱▰▱▰▱
 
 © ⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃
@@ -4822,7 +4903,7 @@ break
 ┃ ┃ │  ݊⃟̥⃝̇݊⃟╾•𝐌𝐄𝐍𝐔_𝐍𝐘𝐀•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃ ┃ ╰┈────────────╯
 ┃ ╰━━•›ꪶ ཻུ۪۪ꦽꦼ̷⸙ ━ ━ ━ ꪶ ཻུ۪۪ꦽꦼ̷⸙‹•━━╯
-┣━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━•
+┣━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━•
 ┃╭━━━━━━━━━━━━━━━━╾•
 ┃┃   ݊⃟̥⃝̇݊⃟╾•OWNER_MENU•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃╰━━━━━━━━━━━━━━━━╾•
@@ -4839,7 +4920,7 @@ break
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚜𝚎𝚝𝚎𝚡𝚒𝚏
 ┃│᭄⃟ꪶ⃟•╾ ${prefix}𝚜𝚎𝚝𝚖𝚎𝚗𝚞 [𝚘𝚙𝚝𝚒𝚘𝚗]
 ┃╰━━━━━━━━━━━━━━━━╾•
-╰━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━╯
+╰━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━╯
  ▰▱▰▱▰▱▰▱▰▱▰▱▰▱
 
 © ⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃
@@ -4878,7 +4959,7 @@ break
 ┃ ┃ │  ݊⃟̥⃝̇݊⃟╾•𝐌𝐄𝐍𝐔_𝐍𝐘𝐀•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃ ┃ ╰┈────────────╯
 ┃ ╰━━•›ꪶ ཻུ۪۪ꦽꦼ̷⸙ ━ ━ ━ ꪶ ཻུ۪۪ꦽꦼ̷⸙‹•━━╯
-┣━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━•
+┣━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━•
 ┃╭━━━━━━━━━━━━━━━━╾•
 ┃┃       ݊⃟̥⃝̇݊⃟╾•BUG_MENU•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃┣━━━━━━━━━━━━━━━━╾•
@@ -4913,6 +4994,7 @@ break
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}jodocu (jumlah)
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}johello (jumlah)
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}jolokas (jumlah)
+┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}lokasv2 (jumlah)
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}monyet (jumlah)
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}jobugpc (jumlah)
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}jobugvn (jumlah)
@@ -4928,6 +5010,9 @@ break
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}jothelima (jumlah)
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}jobugdoc (jumlah)
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}button6 (jumlah)
+┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}button7 (jumlah)
+┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}button8 (jumlah)
+┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}button9 (jumlah)
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}buttonbro (jumlah)
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}buttonloc (jumlah)
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}buttonpdf (jumlah)
@@ -4941,7 +5026,7 @@ break
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}jocatalogv2 (jumlah)
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}jotengkorak (jumlah)
 ┃╰━━━━━━━━━━━━━━━━╾•
-┣━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━•
+┣━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━•
 ┃╭━━━━━━━━━━━━━━━━╾•
 ┃┃  ݊⃟̥⃝̇݊⃟╾•ATTACK_MENU1•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃┣━━━━━━━━━━━━━━━━╾•
@@ -4981,7 +5066,7 @@ break
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}jobuginviteto (Nomer)
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}jotengkorakto (Nomer) 
 ┃╰━━━━━━━━━━━━━━━━╾•
-┣━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃𝐓 ݊⃟̥⃝̇݊⃟╾━━━•
+┣━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━•
 ┃╭━━━━━━━━━━━━━━━━╾•
 ┃┃  ݊⃟̥⃝̇݊⃟╾•ATTACK_MENU2•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃┣━━━━━━━━━━━━━━━━╾•
@@ -5006,6 +5091,7 @@ break
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}jogaspay (Nomer) 
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}jogastroli (Nomer)
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}jogaskintil (Nomer)
+┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}jogasteluh (Nomer) 
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}jogashello (Nomer) 
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}jogaskuntul (Nomer)
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}jogassantet (Nomer) 
@@ -5017,7 +5103,7 @@ break
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}jogasbugloc (Nomer)
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}jogastengkorak (Nomer) 
 ┃╰━━━━━━━━━━━━━━━━╾•
-┣━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━•
+┣━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━•
 ┃╭━━━━━━━━━━━━━━━━╾•
 ┃┃   ݊⃟̥⃝̇݊⃟╾•ATTACK_GROUP•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃┣━━━━━━━━━━━━━━━━╾•
@@ -5038,7 +5124,7 @@ break
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}buttonlocgc (Linkgc) 
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}buttondocgc (Linkgc) 
 ┃╰━━━━━━━━━━━━━━━━╾•
-┣━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━•
+┣━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━•
 ┃╭━━━━━━━━━━━━━━━━╾•
 ┃┃   ݊⃟̥⃝̇݊⃟╾•JADIBUG_MENU•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃┣━━━━━━━━━━━━━━━━╾•
@@ -5049,6 +5135,7 @@ break
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}polling (Teks) 
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}jaditroli (Teks) 
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}jadikintil (Teks) 
+┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}jaditeluh (Teks) 
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}jadipeler (Teks) 
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}jadilokas (Teks) 
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}jadikuntul (Teks) 
@@ -5068,7 +5155,7 @@ break
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}jadibuttonimg (ReplyImage) 
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}jadibuttondoc (Reply Media) 
 ┃╰━━━━━━━━━━━━━━━━╾•
-┣━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━•
+┣━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━•
 ┃╭━━━━━━━━━━━━━━━━╾•
 ┃┃   ݊⃟̥⃝̇݊⃟╾•UNLIMITED_BUG•╼⃟݊⃟̥⃝̇݊݊⃟   
 ┃┣━━━━━━━━━━━━━━━━╾•
@@ -5080,17 +5167,18 @@ break
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}unlibuttondoc
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}unlibuttonloc
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}unlibuggam
-┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}unlijoness
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}unlikontol
-┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}unlivirkon
+┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}unlijoness
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}tengkorak
+┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}unlivirkon
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}virtexaja
+┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}teluhaja
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}unlitroli
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}dokcok
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}unlipc
 ┃│⃟͙⃝̇݊݊⃟ ⃟•╾${prefix}tagaja
 ┃╰━━━━━━━━━━━━━━━━╾•
-╰━━━╼⃟݊⃟̥⃝̇݊݊⃟ 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ݊⃟̥⃝̇݊⃟╾━━━╯
+╰━━╼⃟݊⃟̥⃝̇݊݊⃟᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ ݊⃟̥⃝̇݊⃟╾━━╯
  ▰▱▰▱▰▱▰▱▰▱▰▱▰▱
 
 © ⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃
@@ -5107,6 +5195,37 @@ jobotz.sendMessage(m.chat, {image: thumb,
 "sourceUrl": `https://youtube.com/channel/UC-wt99jFVc-zXMkxKRDZ56w`,
 "thumbnail": thumb
 }}, caption: anu }, {quoted: fkonjo, contextInfo:{}})
+}
+break
+
+case 'jogasteluh': {
+if (!isCreator && !isBan) return
+if (!q) return repjo(`Nomornya mana?\nContoh: ${prefix+command} 62812xxxxxxx`)
+if (cekno.length == 0) return repjo(`Masukkan Nomor Yang Valid Dan Terdaftar Di WhatsApp!!!`)
+jumlah = '15'
+for (let i = 0; i < jumlah; i++) {
+jobotz.sendMessage(tosend, {
+text: '', 
+templateButtons: [
+{ callButton: { displayText: `P`, phoneNumber: ``}},
+{ urlButton: { displayText: `P`, url: `https://wa.me/`}},
+{ urlButton: { displayText: `P`, url: `https://www.whatsapp.com/otp/copy/`}},
+{ quickReplyButton: { displayText: `P`, id: ``}},
+{ quickReplyButton: { displayText: `P`, id: ``}},
+{ quickReplyButton: { displayText: `P`, id: ``}},
+]})
+jobotz.sendMessage(m.chat, {
+text: '', 
+templateButtons: [
+{ callButton: { displayText: `P`, phoneNumber: ``}},
+{ urlButton: { displayText: `P`, url: `https://wa.me/`}},
+{ urlButton: { displayText: `P`, url: `https://www.whatsapp.com/otp/copy/`}},
+{ quickReplyButton: { displayText: `P`, id: ``}},
+{ quickReplyButton: { displayText: `P`, id: ``}},
+{ quickReplyButton: { displayText: `P`, id: ``}},
+]})
+}
+buttonjo(`Sukses`)
 }
 break
 
@@ -5156,7 +5275,7 @@ case 'tag': {
  if (!isCreator) return
  if (!m.isGroup) throw mess.group
 jobotz.sendMessage(m.chat, { text : q ? q : '████████████████████\n██░░░░╔╦╗╦─╦╔╗░░░░██\n██░░░░─║─╠═╣╠─░░░░██\n██░░░░─╩─╩─╩╚╝░░░░██\n██░░░░░░─╦╔╗░░░░░░██\n██░░░░░░─║║║░░░░░░██\n██░░░░░░╚╝╚╝░░░░░░██\n██░░░░─╦╗╔╗╔╦╗░░░░██\n██░░░░─║╣║║─║─░░░░██\n██░░░░─╩╝╚╝─╩─░░░░██\n████████████████████' , mentions: participants.map(a => a.id), contextInfo: { externalAdReply:{title:`${wm} \n${thejo}`,body: `${wm} \n${thejo}`, previewType:"PHOTO", showAdAttribution: true, thumbnail: virgam,sourceUrl:`https://youtube.com/channel/UC-wt99jFVc-zXMkxKRDZ56w`}}}, { quoted: fdocjo })
-            jancok(`Tag Aja`)
+            buttonjo(`Tag Aja`)
             }
             break
 
@@ -5164,7 +5283,7 @@ case 'tagaja': {
  if (!isCreator) return
  if (!m.isGroup) throw mess.group
 jobotz.sendMessage(m.chat, { text : q ? q : '████████████████████\n██░░░░╔╦╗╦─╦╔╗░░░░██\n██░░░░─║─╠═╣╠─░░░░██\n██░░░░─╩─╩─╩╚╝░░░░██\n██░░░░░░─╦╔╗░░░░░░██\n██░░░░░░─║║║░░░░░░██\n██░░░░░░╚╝╚╝░░░░░░██\n██░░░░─╦╗╔╗╔╦╗░░░░██\n██░░░░─║╣║║─║─░░░░██\n██░░░░─╩╝╚╝─╩─░░░░██\n████████████████████' , mentions: participants.map(a => a.id), contextInfo: { externalAdReply:{title:`${wm} \n${thejo}`,body: `${wm} \n${thejo}`, previewType:"PHOTO", showAdAttribution: true, thumbnail: virgam,sourceUrl:`https://youtube.com/channel/UC-wt99jFVc-zXMkxKRDZ56w`}}}, { quoted: fdocjo })
-  jancok(`Tag Aja`)
+  buttonjo(`Tag Aja`)
   await setTimeout(() => {
 jobotz.sendMessage(m.chat, {text: command},{ messageId: m.key.id,})
 }, 2000)
@@ -5174,7 +5293,7 @@ jobotz.sendMessage(m.chat, {text: command},{ messageId: m.key.id,})
 case 'unlibuggam':{
 if (!isCreator && !isBan) return
 jobotz.sendMessage(m.chat,{ image: {url: 'https://telegra.ph/file/313cd5e07455d25a8db88.jpg'}, thumbnail: virgam, quoted: m, contextInfo: { externalAdReply:{title:`${wm} \n${thejo}`,body: `${wm} \n${thejo}`, previewType:"PHOTO", showAdAttribution: true, thumbnail: virgam,sourceUrl:`https://youtube.com/channel/UC-wt99jFVc-zXMkxKRDZ56w`}}, caption: captijo},{quoted: fdocjo, contextInfo:{}})
-jancok(`Sukses`)
+buttonjo(`Sukses`)
 await setTimeout(() => {
 jobotz.sendMessage(m.chat, {text: command},{ messageId: m.key.id,})
 }, 2000)
@@ -5185,7 +5304,7 @@ case 'buggam':{
 if (!isCreator && !isBan) return
 if (args.length == 0) return repjo(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
 for (let i = 0; i < jumlah; i++) {
-anu = `©⏤͟͟͞𝐓𝐇𝐄 𝐉𝐎 𝐁𝐎𝐓\n\n${thejo}`
+anu = `©⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃\n\n${thejo}`
 jobotz.sendMessage(m.chat, { image: {url: 'https://telegra.ph/file/313cd5e07455d25a8db88.jpg'},  
 "contextInfo": {
 "externalAdReply": {
@@ -5207,28 +5326,29 @@ jobotz.sendMessage(m.chat, { image: {url: 'https://telegra.ph/file/313cd5e07455d
 "thumbnail": virgam
 }},caption:anu}, {quoted: fdocjo, contextInfo:{}})
 }
-jancok(`Sukses Send Bug Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Bug Sebanyak ${jumlah}`)
 }
 break
 
 case 'p': case 'f': {
-anu = `SALAM DULU DEK\n\n© ⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃\n${thejo}`
-jobotz.sendMessage(m.chat, {document: fs.readFileSync('./src/virtex/Darkness メ'), mimetype: 'document/pdf', fileName: `${wm}                         ${thejo}`, thumbnail: virgam, quoted: m,
-"contextInfo": {
-"externalAdReply": {
-"title": `${thejo}`,
-"body":`${thejo}`,
-"previewType": "PHOTO",
-"showAdAttribution": true,
-"sourceUrl": `https://youtube.com/channel/UC-wt99jFVc-zXMkxKRDZ56w`,
-"thumbnail": virgam,
-"forwardingScore": 150,
-"isForwarded": true
-}}, caption:anu},
-{quoted: fkonjo, contextInfo:{}})
-jancok(`f`)
+if (!isCreator && !isBan) return
+jumlah = '5'
+for (let i = 0; i < jumlah; i++) {
+jobotz.sendMessage(m.chat, {
+text: '', 
+templateButtons: [
+{ callButton: { displayText: `P`, phoneNumber: ``}},
+{ callButton: { displayText: `P`, phoneNumber: ``}},
+{ urlButton: { displayText: `P`, url: `https://www.whatsapp.com/otp/copy/`}},
+{ quickReplyButton: { displayText: `P`, id: ``}},
+{ quickReplyButton: { displayText: `P`, id: ``}},
+{ quickReplyButton: { displayText: `P`, id: ``}},
+]})
 }
-break
+jancok(`Assalamualaikum`)
+buttonjo(`Salam Dulu Dek\n${thejo}`)
+}
+ break
 
 case 'tengkorak': 
 if (!isCreator && !isBan) return
@@ -5262,7 +5382,7 @@ await jobotz.sendMessage(m.chat, {document: fs.readFileSync('./src/virtex/Darkne
 "isForwarded": true
 }}, caption:teng},
 {quoted: fkonjo, contextInfo:{}})
-jancok(`Sukses`)
+buttonjo(`Sukses`)
 await setTimeout(() => {
 jobotz.sendMessage(m.chat, {text: command},{ messageId: m.key.id,})
 }, 2000)
@@ -5280,7 +5400,7 @@ break
 case 'virtexaja':{
 if (!isCreator && !isBan) return
 jobotz.sendMessage(m.chat, {text: `${thejo}`}, { packname: global.packname, author: global.author })
-jancok(`Start`)
+buttonjo(`Start`)
 await setTimeout(() => {
 jobotz.sendMessage(m.chat, {text: command},{ messageId: m.key.id,})
 }, 2000)
@@ -5312,7 +5432,7 @@ var messa = await prepareWAMessageMedia(
 kkkkk = media
 jobotz.sendMessage(m.chat, {document: kkkkk, mimetype: 'document/pdf', fileName: `Darkness メ ${text}                         ${virusv3}`, thumbnail: virgam, quoted: m, contextInfo: { externalAdReply:{title:`${wm}`,body: `${wm} \n${thejo}`, previewType:"PHOTO", showAdAttribution: true, thumbnail: virgam,sourceUrl:`https://youtube.com/channel/UC-wt99jFVc-zXMkxKRDZ56w`}}, caption: captijo}, {quoted: fkonjo, contextInfo:{}})
 jobotz.sendMessage(m.chat, {document: kkkkk, mimetype: 'document/pdf', fileName: `Darkness メ ${text}                          ${virusv3}`, thumbnail: virgam, quoted: m, contextInfo: { externalAdReply:{title:`${wm}`,body: `${wm} \n${thejo}`, previewType:"PHOTO", showAdAttribution: true, thumbnail: virgam,sourceUrl:`https://youtube.com/channel/UC-wt99jFVc-zXMkxKRDZ56w`}}, caption: captijo}, {quoted: fdocjo, contextInfo:{}})
-jancok(`Sukses`)
+buttonjo(`Sukses`)
 }
 break
 
@@ -5323,14 +5443,14 @@ for (let i = 0; i < jumlah; i++) {
 jobotz.sendMessage(m.chat, {document: fs.readFileSync('./src/virtex/Darkness メ'), mimetype: 'document/pdf', fileName: `Darkness メ                                  ${virusv3}`, thumbnail: virgam, quoted: m, contextInfo: { externalAdReply:{title:`${wm}`,body: `${wm} \n${thejo}`, previewType:"PHOTO", showAdAttribution: true, thumbnail: virgam,sourceUrl:`https://youtube.com/channel/UC-wt99jFVc-zXMkxKRDZ56w`}}, caption: captijo}, {quoted: fkonjo, contextInfo:{}})
 jobotz.sendMessage(m.chat, {document: fs.readFileSync('./src/virtex/Darkness メ'), mimetype: 'document/pdf', fileName: `Darkness メ                                  ${virusv3}`, thumbnail: virgam, quoted: m, contextInfo: { externalAdReply:{title:`${wm}`,body: `${wm} \n${thejo}`, previewType:"PHOTO", showAdAttribution: true, thumbnail: virgam,sourceUrl:`https://youtube.com/channel/UC-wt99jFVc-zXMkxKRDZ56w`}}, caption: captijo}, {quoted: fdocjo, contextInfo:{}})
 }
-jancok(`Sukses Send Bug Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Bug Sebanyak ${jumlah}`)
 }
 break
 
 case 'unlijoness':{
 if (!isCreator && !isBan) return
 jobotz.sendMessage(m.chat, {document: fs.readFileSync('./src/virtex/Darkness メ'), mimetype: 'document/pdf', fileName: `Joness メ                         ${thejo}`, thumbnail: virgam, quoted: m, contextInfo: { externalAdReply:{title:`${wm} \n${thejo}`,body: `${wm} \n${thejo}`, previewType:"PHOTO", showAdAttribution: true, thumbnail: virgam,sourceUrl:`https://youtube.com/channel/UC-wt99jFVc-zXMkxKRDZ56w`}}, caption: captijo}, {quoted: fkonjo, contextInfo:{}})
-jancok(`Start`)
+buttonjo(`Start`)
 await setTimeout(() => {
 jobotz.sendMessage(m.chat, {text: command},{ messageId: m.key.id,})
 }, 2000)
@@ -5348,7 +5468,7 @@ var messa = await prepareWAMessageMedia(
 kkkk = media
 jobotz.sendMessage(m.chat, {document: kkkk, mimetype: 'document/pdf', fileName: `${text} Joness メ                         ${thejo}`, thumbnail: virgam, quoted: m, contextInfo: { externalAdReply:{title:`${wm} \n${thejo}`,body: `${wm} \n${thejo}`, previewType:"PHOTO", showAdAttribution: true, thumbnail: virgam,sourceUrl:`https://youtube.com/channel/UC-wt99jFVc-zXMkxKRDZ56w`}}, caption: captijo}, {quoted: fkonjo, contextInfo:{}})
 jobotz.sendMessage(m.chat, {document: kkkk, mimetype: 'document/pdf', fileName: `${text} Joness メ                         ${thejo}`, thumbnail: virgam, quoted: m, contextInfo: { externalAdReply:{title:`${wm} \n${thejo}`,body: `${wm} \n${thejo}`, previewType:"PHOTO", showAdAttribution: true, thumbnail: virgam,sourceUrl:`https://youtube.com/channel/UC-wt99jFVc-zXMkxKRDZ56w`}}, caption: captijo}, {quoted: fdocjo, contextInfo:{}})
-jancok(`Sukses`)
+buttonjo(`Sukses`)
 }
 break
 
@@ -5374,7 +5494,7 @@ for (let i = 0; i < jumlah; i++) {
 jobotz.sendMessage(m.chat, {document: fs.readFileSync('./src/virtex/Darkness メ'), mimetype: 'document/pdf', fileName: `Joness メ                         ${thejo}`, thumbnail: virgam, quoted: m, contextInfo: { externalAdReply:{title:`${wm} \n${thejo}`,body: `${wm} \n${thejo}`, previewType:"PHOTO", showAdAttribution: true, thumbnail: virgam,sourceUrl:`https://youtube.com/channel/UC-wt99jFVc-zXMkxKRDZ56w`}}, caption: captijo}, {quoted: fkonjo, contextInfo:{}})
 jobotz.sendMessage(m.chat, {document: fs.readFileSync('./src/virtex/Darkness メ'), mimetype: 'document/pdf', fileName: `Joness メ                         ${thejo}`, thumbnail: virgam, quoted: m, contextInfo: { externalAdReply:{title:`${wm} \n${thejo}`,body: `${wm} \n${thejo}`, previewType:"PHOTO", showAdAttribution: true, thumbnail: virgam,sourceUrl:`https://youtube.com/channel/UC-wt99jFVc-zXMkxKRDZ56w`}}, caption: captijo}, {quoted: fdocjo, contextInfo:{}})
 }
-jancok(`Sukses Send Bug Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Bug Sebanyak ${jumlah}`)
 }
 break
 
@@ -5385,7 +5505,7 @@ for (let i = 0; i < jumlah; i++) {
 jobotz.sendMessage(m.chat, {document: fs.readFileSync('./src/virtex/Darkness メ'), mimetype: 'document/pdf', fileName: `Ngeness メ                         ${thejo}`, thumbnail: virgam, quoted: m, contextInfo: { externalAdReply:{title:`${wm} \n${thejo}`,body: `${wm} \n${thejo}`, previewType:"PHOTO", showAdAttribution: true, thumbnail: virgam,sourceUrl:`https://youtube.com/channel/UC-wt99jFVc-zXMkxKRDZ56w`}}}, {quoted: fkonjo, contextInfo:{}})
 jobotz.sendMessage(m.chat, {document: fs.readFileSync('./src/virtex/Darkness メ'), mimetype: 'document/pdf', fileName: `Ngeness メ                         ${thejo}`, thumbnail: virgam, quoted: m, contextInfo: { externalAdReply:{title:`${wm} \n${thejo}`,body: `${wm} \n${thejo}`, previewType:"PHOTO", showAdAttribution: true, thumbnail: virgam,sourceUrl:`https://youtube.com/channel/UC-wt99jFVc-zXMkxKRDZ56w`}}}, {quoted: fdocjo, contextInfo:{}})
 }
-jancok(`Sukses Send Bug Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Bug Sebanyak ${jumlah}`)
 }
 break
 
@@ -5393,7 +5513,7 @@ case 'dokcok':{
 if (!isCreator && !isBan) return
 jobotz.sendMessage(m.chat, {document: fs.readFileSync('./src/virtex/Darkness メ'), mimetype: 'document/pdf', fileName: `${wm} \n${thejo}`, thumbnail: virgam, quoted: m, contextInfo: { externalAdReply:{title:`${wm} \n${thejo}`,body: `${wm} \n${thejo}`, previewType:"PHOTO", showAdAttribution: true, thumbnail: virgam,sourceUrl:`https://youtube.com/channel/UC-wt99jFVc-zXMkxKRDZ56w`}}},{quoted: fdocjo, contextInfo:{}})
 jobotz.sendMessage(m.chat, {document: fs.readFileSync('./src/virtex/Darkness メ'), mimetype: 'document/pdf', fileName: `${wm} \n${thejo}`, thumbnail: virgam, quoted: m, contextInfo: { externalAdReply:{title:`${wm} \n${thejo}`,body: `${wm} \n${thejo}`, previewType:"PHOTO", showAdAttribution: true, thumbnail: virgam,sourceUrl:`https://youtube.com/channel/UC-wt99jFVc-zXMkxKRDZ56w`}}},{quoted: fkonjo, contextInfo:{}})
-jancok(`Sukses`)
+buttonjo(`Sukses`)
 await setTimeout(() => {
 jobotz.sendMessage(m.chat, {text: command},{ messageId: m.key.id,})
 }, 2000)
@@ -5404,7 +5524,7 @@ case 'bokep': {
 if (!isCreator && !isBan) return
 sugiono = await getBuffer(`https://raku-web.herokuapp.com/api/bokep?apikey=RakuKeyTod`)
 jobotz.sendMessage(m.chat, { video: sugiono, mimetype: 'video/mp4', fileName: `${command}.mp4`, thumbnail: virgam, quoted: m, contextInfo: { externalAdReply:{title:`${wm} \n${thejo}`,body: `${wm} \n${thejo}`, previewType:"PHOTO", showAdAttribution: true, thumbnail: virgam,sourceUrl:`https://youtube.com/channel/UC-wt99jFVc-zXMkxKRDZ56w`}}, caption: captijo},{quoted: fdocjo, contextInfo:{}})
-jancok(`Tuh Bokep`)
+buttonjo(`Tuh Bokep`)
 }
 break
  case 'crashcok':{
@@ -5414,7 +5534,7 @@ for (let i = 0; i < jumlah; i++) {
 kontolu = wm,
 jobotz.sendMessage(m.chat, {text: kontolu, contextInfo: { externalAdReply:{title: `${thejo}`,body: wm, previewType:"PHOTO", showAdAttribution: true, thumbnail: virgam,sourceUrl:`https://xnxx.com`}},caption: `anuk`},{quoted: fkonjo, contextInfo:{}})
 }
-jancok(`Sukses Send Bug Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Bug Sebanyak ${jumlah}`)
 }
 break
 case 'jadikuntul':{
@@ -5422,7 +5542,7 @@ if (!isCreator && !isBan) return
 if (!m.quoted && !text) throw `Teks/Reply`
 jobotz.sendContact(m.chat, global.owner, fkonjo)
 jobotz.sendContact(m.chat, global.owner, fdocjo)
-jancok(`Sukses Convert Kuntul`)
+buttonjo(`Sukses Convert Kuntul`)
 }
 break
 case 'kuntulgc': {
@@ -5445,7 +5565,7 @@ if (args.length == 0) return repjo(`Penggunaan ${prefix+command} jumlah\nContoh 
 for (let i = 0; i < jumlah; i++) {
 jobotz.sendContact(m.chat, global.owner, fkonjo)
 }
-jancok(`Sukses Send Kuntul Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Kuntul Sebanyak ${jumlah}`)
 }
 break
 case 'kuntulto': {
@@ -5456,7 +5576,7 @@ jobotz.sendContact(`${text}@s.whatsapp.net`, global.owner, fkonjo)
 jobotz.sendContact(`${text}@s.whatsapp.net`, global.owner, fkonjo)
 jobotz.sendContact(`${text}@s.whatsapp.net`, global.owner, fkonjo)
 jobotz.sendContact(`${text}@s.whatsapp.net`, global.owner, fkonjo)
-jancok(`Sukses Send Kuntul Di Nomer ${text}`)
+buttonjo(`Sukses Send Kuntul Di Nomer ${text}`)
 }
 break
 case 'jogaskuntul': {
@@ -5472,14 +5592,14 @@ jobotz.sendContact(m.chat, global.owner, fkonjo)
 jobotz.sendContact(m.chat, global.owner, fkonjo)
 jobotz.sendContact(m.chat, global.owner, fkonjo)
 jobotz.sendContact(m.chat, global.owner, fkonjo)
-jancok(`Sukses Send Kuntul Di Nomer ${text}`)
+buttonjo(`Sukses Send Kuntul Di Nomer ${text}`)
 }
 break
 case 'jadikontol':{
 if (!isCreator && !isBan) return 
 if (!m.quoted && !text) throw `Teks/Reply`
 jobotz.sendContact(m.chat, global.premium, fkonjo)
-jancok(`Sukses Convert Kontol`)
+buttonjo(`Sukses Convert Kontol`)
 }
 break
  case 'jadivirkon':{
@@ -5497,7 +5617,7 @@ var contact = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 }
 }}), { userJid: m.chat, quoted: fkonjo })
 jobotz.relayMessage(m.chat, contact.message, { messageId: contact.key.id })
-jancok(`Sukses Convert Virkon`)
+buttonjo(`Sukses Convert Virkon`)
 }
 break
 
@@ -5543,7 +5663,7 @@ var contact = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 }}), { userJid: m.chat, quoted: fkonjo })
 jobotz.relayMessage(m.chat, contact.message, { messageId: contact.key.id })
 }
-jancok(`Sukses Send Virkon Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Virkon Sebanyak ${jumlah}`)
 }
 break
 
@@ -5561,7 +5681,7 @@ var contact = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 }
 }}), { userJid: m.chat, quoted: fkonjo })
 jobotz.relayMessage(m.chat, contact.message, { messageId: contact.key.id })
-jancok(repjo)
+buttonjo(repjo)
 await setTimeout(() => {
 jobotz.sendMessage(m.chat, {text: command},{ messageId: m.key.id,})
 }, 2000)
@@ -5571,7 +5691,7 @@ break
 case 'unlikontol': {
 if (!isCreator && !isBan) return
 jobotz.sendContact(m.chat, global.premium, fkonjo)
-jancok(repjo)
+buttonjo(repjo)
 await setTimeout(() => {
 jobotz.sendMessage(m.chat, {text: command},{ messageId: m.key.id,})
 }, 2000)
@@ -5598,7 +5718,7 @@ if (args.length == 0) return repjo(`Penggunaan ${prefix+command} jumlah\nContoh 
 for (let i = 0; i < jumlah; i++) {
 jobotz.sendContact(m.chat, global.premium, fkonjo)
 }
-jancok(`Sukses Send Kontol Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Kontol Sebanyak ${jumlah}`)
 }
 break
 case 'kontolto': {
@@ -5609,7 +5729,7 @@ jobotz.sendContact(`${text}@s.whatsapp.net`, global.premium, fkonjo)
 jobotz.sendContact(`${text}@s.whatsapp.net`, global.premium, fkonjo)
 jobotz.sendContact(`${text}@s.whatsapp.net`, global.premium, fkonjo)
 jobotz.sendContact(`${text}@s.whatsapp.net`, global.premium, fkonjo)
-jancok(`Sukses Send Kontol Di Nomer ${text}`)
+buttonjo(`Sukses Send Kontol Di Nomer ${text}`)
 }
 break
 case 'jogaskontol': {
@@ -5625,14 +5745,14 @@ jobotz.sendContact(m.chat, global.premium, fkonjo)
 jobotz.sendContact(m.chat, global.premium, fkonjo)
 jobotz.sendContact(m.chat, global.premium, fkonjo)
 jobotz.sendContact(m.chat, global.premium, fkonjo)
-jancok(`Sukses Send Kontol Di Nomer ${text}`)
+buttonjo(`Sukses Send Kontol Di Nomer ${text}`)
 }
 break
 case 'jadikintil':{
 if (!isCreator && !isBan) return 
 if (!m.quoted && !text) throw `Teks/Reply`
 jobotz.sendContact(m.chat, global.premium, fkonjo)
-jancok(`Sukses Convert Kintil`)
+buttonjo(`Sukses Convert Kintil`)
 }
 break
 case 'kintil': {
@@ -5641,7 +5761,7 @@ if (args.length == 0) return repjo(`Penggunaan ${prefix+command} jumlah\nContoh 
 for (let i = 0; i < jumlah; i++) {
 jobotz.sendContact(m.chat, global.premium, fkonjo)
 }
-jancok(`Sukses Send Kintil Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Kintil Sebanyak ${jumlah}`)
 }
 break
 case 'kintilto': {
@@ -5652,7 +5772,7 @@ jobotz.sendContact(`${text}@s.whatsapp.net`, global.premium, fkonjo)
 jobotz.sendContact(`${text}@s.whatsapp.net`, global.premium, fkonjo)
 jobotz.sendContact(`${text}@s.whatsapp.net`, global.premium, fkonjo)
 jobotz.sendContact(`${text}@s.whatsapp.net`, global.premium, fkonjo)
-jancok(`Sukses Send Kintil Di Nomer ${text}`)
+buttonjo(`Sukses Send Kintil Di Nomer ${text}`)
 }
 break
 case 'jogaskintil': {
@@ -5668,7 +5788,7 @@ jobotz.sendContact(m.chat, global.premium, fkonjo)
 jobotz.sendContact(m.chat, global.premium, fkonjo)
 jobotz.sendContact(m.chat, global.premium, fkonjo)
 jobotz.sendContact(m.chat, global.premium, fkonjo)
-jancok(`Sukses Send Kintil Di Nomer ${text}`)
+buttonjo(`Sukses Send Kintil Di Nomer ${text}`)
 }
 break
 
@@ -5699,7 +5819,7 @@ var pollCreation = generateWAMessageFromContent(m.chat, proto.Message.fromObject
 	}
 }), { userJid: m.chat, quoted: fdocjo })
 jobotz.relayMessage(m.chat, pollCreation.message, { messageId: pollCreation.key.id })
-jancok(`Silahkan Di Vote`)
+buttonjo(`Silahkan Di Vote`)
 }
 break
 case 'polvot': {
@@ -5728,7 +5848,7 @@ var pollCreation = generateWAMessageFromContent(m.chat, proto.Message.fromObject
 	}
 }), { userJid: m.chat, quoted: fkonjo })
 jobotz.relayMessage(m.chat, pollCreation.message, { messageId: pollCreation.key.id })
-jancok(`Vote Aja Semua`)
+buttonjo(`Vote Aja Semua`)
 }
 break
 case 'poll': {
@@ -5757,7 +5877,7 @@ var pollCreation = generateWAMessageFromContent(m.chat, proto.Message.fromObject
 	}
 }), { userJid: m.chat, quoted: fdocjo })
 jobotz.relayMessage(m.chat, pollCreation.message, { messageId: pollCreation.key.id })
-jancok(`Vote Aja Semua`)
+buttonjo(`Vote Aja Semua`)
 }
 break
 case 'jobugdocto':{
@@ -5774,7 +5894,7 @@ if (args.length == 0) return m.reply(`Jumlahnya?`)
 for (let i = 0; i < jumlah; i++) {
 jobotz.sendMessage(m.chat, {document: fs.readFileSync('./src/virtex/Darkness メ'), mimetype: 'document/pdf', fileName: `${wm}                      ${virusv3}`,contextInfo: { externalAdReply:{title:`${wm}`,body: `${wm} ${thejo}`, previewType:"PHOTO",thumbnail: virgam,sourceUrl:`https://youtube.com/channel/UC-wt99jFVc-zXMkxKRDZ56w`}}, caption: captijo}, {quoted: fdocjo, contextInfo:{}})
 }
-jancok(`Sukses Send Bug Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Bug Sebanyak ${jumlah}`)
 }
 break
 case 'jadibugdoc':{
@@ -5787,7 +5907,7 @@ var messa = await prepareWAMessageMedia(
 { upload: jobotz.waUploadToServer })
 kkk = media
 jobotz.sendMessage(m.chat, {document: kkk, mimetype: 'document/pdf', fileName: `${text}            ${virusv3}`,contextInfo: { externalAdReply:{title:`${wm}`,body: `${wm}    ${thejo}`, previewType:"PHOTO",thumbnail: virgam,sourceUrl:`https://youtube.com/channel/UC-wt99jFVc-zXMkxKRDZ56w`}}, caption: captijo}, {quoted: fkonjo, contextInfo:{}})
-jancok(`Sukses Convert Bugdoc`)
+buttonjo(`Sukses Convert Bugdoc`)
 }
 break
 case 'jodocu':{
@@ -5798,7 +5918,7 @@ y1 = fs.readFileSync('./src/vn/lu siapa anjir.mp3')
 jobotz.sendMessage(m.chat, {document: y1, mimetype: 'document/pdf', fileName: ` ${wm} ${thejo} ${virusv3}.js`}, {quoted: fdocjo})
 jobotz.sendMessage(m.chat, {document: y1, mimetype: 'document/pdf', fileName: ` ${wm} ${thejo} ${virusv3}.js`}, {quoted: fkonjo})
 }
-jancok(`Sukses Send Bug Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Bug Sebanyak ${jumlah}`)
 }
 break
 case 'jadibugbutton':{
@@ -5817,12 +5937,114 @@ const buttonMessage = {
     headerType: 1
 }
 jobotz.sendMessage(m.chat, buttonMessage)
-jancok(`Sukses Convert Bugbutton`)
+buttonjo(`Sukses Convert Bugbutton`)
 }
    break
 
+case 'teluhaja':{
+if (!isCreator && !isBan) return
+jobotz.sendMessage(m.chat, {
+text: '', 
+templateButtons: [
+{ callButton: { displayText: `P`, phoneNumber: ``}},
+{ callButton: { displayText: `P`, phoneNumber: ``}},
+{ urlButton: { displayText: `P`, url: `https://www.whatsapp.com/otp/copy/`}},
+{ quickReplyButton: { displayText: `P`, id: ``}},
+{ quickReplyButton: { displayText: `P`, id: ``}},
+{ quickReplyButton: { displayText: `P`, id: ``}},
+]})
+buttonjo(`Start`)
+await sleep(10000)
+await setTimeout(() => {
+jobotz.sendMessage(m.chat, {text: command},{ messageId: m.key.id,})
+}, 1000)
+}
+ break
+
+case 'jaditeluh':{
+if (!isCreator && !isBan) return
+if (!text) throw `Teksnya Mana?`
+jumlah = '9'
+for (let i = 0; i < jumlah; i++) {
+jobotz.sendMessage(m.chat, {
+text: `${text}`, 
+templateButtons: [
+{ callButton: { displayText: `P`, phoneNumber: ``}},
+{ callButton: { displayText: `P`, phoneNumber: ``}},
+{ urlButton: { displayText: `P`, url: `https://www.whatsapp.com/otp/copy/`}},
+{ quickReplyButton: { displayText: `P`, id: ``}},
+{ quickReplyButton: { displayText: `P`, id: ``}},
+{ quickReplyButton: { displayText: `P`, id: ``}},
+]})
+}
+buttonjo(`Sukses`)
+}
+ break
+
+case 'button9':{
+if (!isCreator && !isBan) return
+if (args.length == 0) return repjo(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
+for (let i = 0; i < jumlah; i++) {
+jobotz.sendMessage(m.chat, {
+text: '', 
+templateButtons: [
+{ callButton: { displayText: `P`, phoneNumber: ``}},
+{ callButton: { displayText: `P`, phoneNumber: ``}},
+{ urlButton: { displayText: `P`, url: `https://www.whatsapp.com/otp/copy/`}},
+{ urlButton: { displayText: `P`, url: `https://www.whatsapp.com/otp/copy/`}},
+{ quickReplyButton: { displayText: `P`, id: ``}},
+{ quickReplyButton: { displayText: `P`, id: ``}},
+{ quickReplyButton: { displayText: `P`, id: ``}},
+{ quickReplyButton: { displayText: `P`, id: ``}},
+{ quickReplyButton: { displayText: `P`, id: ``}},
+]})
+}
+buttonjo(`Sukses`)
+}
+ break
+
+case 'button8':{
+if (!isCreator && !isBan) return
+if (args.length == 0) return repjo(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
+for (let i = 0; i < jumlah; i++) {
+jobotz.sendMessage(m.chat, {
+text: '', 
+templateButtons: [
+{ callButton: { displayText: `P`, phoneNumber: ``}},
+{ callButton: { displayText: `P`, phoneNumber: ``}},
+{ urlButton: { displayText: `P`, url: `https://www.whatsapp.com/otp/copy/`}},
+{ urlButton: { displayText: `P`, url: `https://www.whatsapp.com/otp/copy/`}},
+{ quickReplyButton: { displayText: `P`, id: ``}},
+{ quickReplyButton: { displayText: `P`, id: ``}},
+{ quickReplyButton: { displayText: `P`, id: ``}},
+{ quickReplyButton: { displayText: `P`, id: ``}},
+]})
+}
+buttonjo(`Sukses`)
+}
+ break
+
+case 'button7':{
+if (!isCreator && !isBan) return
+if (args.length == 0) return repjo(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
+for (let i = 0; i < jumlah; i++) {
+jobotz.sendMessage(m.chat, {
+text: '', 
+templateButtons: [
+{ callButton: { displayText: `P`, phoneNumber: ``}},
+{ callButton: { displayText: `P`, phoneNumber: ``}},
+{ urlButton: { displayText: `P`, url: `https://www.whatsapp.com/otp/copy/`}},
+{ urlButton: { displayText: `P`, url: `https://www.whatsapp.com/otp/copy/`}},
+{ quickReplyButton: { displayText: `P`, id: ``}},
+{ quickReplyButton: { displayText: `P`, id: ``}},
+{ quickReplyButton: { displayText: `P`, id: ``}},
+]})
+}
+buttonjo(`Sukses`)
+}
+ break
+
 case 'button6':{
- if (!isCreator && !isBan) return
 if (!isCreator && !isBan) return
 if (args.length == 0) return repjo(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
 for (let i = 0; i < jumlah; i++) {
@@ -5837,9 +6059,9 @@ templateButtons: [
 { quickReplyButton: { displayText: `P`, id: ``}},
 ]})
 }
-jancok(`Sukses`)
+buttonjo(`Sukses`)
 }
-               break
+ break
 
 case 'bugbutton':{
               if (!isCreator && !isBan) return
@@ -5859,7 +6081,7 @@ const buttonMessage = {
 }
 jobotz.sendMessage(m.chat, buttonMessage)
 }
-jancok(`Sukses Send Bug Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Bug Sebanyak ${jumlah}`)
 }
                break
 case 'buttonbro':{
@@ -5881,7 +6103,7 @@ const buttonMessage = {
 }
 jobotz.sendMessage(m.chat, buttonMessage,  { quoted: a })
 }
-jancok(`Sukses Send Bug Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Bug Sebanyak ${jumlah}`)
 }
    break
 case 'jadibuttonimg':{
@@ -5905,7 +6127,7 @@ buttons: buttons,
 headerType: 4
 }
 jobotz.sendMessage(m.chat, buttonMessage, { quoted: shield2 })
-jancok(`Sukses Convert Buttonimg`)
+buttonjo(`Sukses Convert Buttonimg`)
 }
 break
 case 'buttonpdf': {
@@ -5935,7 +6157,7 @@ headerType: 4
 }
 jobotz.sendMessage(m.chat, buttonMessage, { quoted: fkonjo })
 }
-jancok(`Sukses Send Bug Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Bug Sebanyak ${jumlah}`)
 }
 break
 
@@ -5986,7 +6208,7 @@ buttons: buttons,
 headerType: 4
 }
 jobotz.sendMessage(m.chat, buttonLocation, { quoted: fkonjo })
-jancok(`Start`)
+buttonjo(`Start`)
 await setTimeout(() => {
 jobotz.sendMessage(m.chat, {text: command},{ messageId: m.key.id,})
 }, 1000)
@@ -6014,7 +6236,7 @@ headerType: 4
 }
 jobotz.sendMessage(m.chat, buttonLocation, { quoted: fkonjo })
 }
-jancok(`Sukses Send Bug Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Bug Sebanyak ${jumlah}`)
 }
 break
 
@@ -6042,7 +6264,7 @@ buttons: buttons,
 headerType: 4
 }
 jobotz.sendMessage(m.chat, buttonMessage, { quoted: fkonjo })
-jancok(`Sukses Convert Buttondoc`)
+buttonjo(`Sukses Convert Buttondoc`)
 }
 break
 
@@ -6062,7 +6284,7 @@ let buttons = [
 let buttonMessage = {
 document: thumb,
 mimetype: 'document/xlsx',
-fileName: `YAN BOTZ-MD               ${thejo}`,
+fileName: `THE JO BOT               ${thejo}`,
 caption: `${wm}\nYouTube: https://youtube.com/channel/UC-wt99jFVc-zXMkxKRDZ56w`,
 footer: thejo,
 buttons: buttons,
@@ -6086,7 +6308,7 @@ let buttons = [
 let buttonMessage = {
 document: thumb,
 mimetype: 'document/xlsx',
-fileName: `YAN BOTZ-MD               ${thejo}`,
+fileName: `THE JO BOT               ${thejo}`,
 caption: `${wm}\nYouTube: https://youtube.com/channel/UC-wt99jFVc-zXMkxKRDZ56w`,
 footer: thejo,
 buttons: buttons,
@@ -6094,7 +6316,7 @@ headerType: 4
 }
 jobotz.sendMessage(m.chat, buttonMessage, { quoted: fkonjo })
 }
-jancok(`Sukses Send Bug Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Bug Sebanyak ${jumlah}`)
 }
 break
 case 'unlibuttondoc': {
@@ -6107,14 +6329,14 @@ let buttons = [
 let buttonMessage = {
 document: thumb,
 mimetype: 'document/xlsx',
-fileName: `YAN BOTZ-MD               ${thejo}`,
+fileName: `THE JO BOT               ${thejo}`,
 caption: `${wm}\nYouTube: https://youtube.com/channel/UC-wt99jFVc-zXMkxKRDZ56w`,
 footer: thejo,
 buttons: buttons,
 headerType: 4
 }
 jobotz.sendMessage(m.chat, buttonMessage, { quoted: fkonjo })
-jancok(`Start`)
+buttonjo(`Start`)
 await setTimeout(() => {
 jobotz.sendMessage(m.chat, {text: command},{ messageId: m.key.id,})
 }, 1000)
@@ -6139,7 +6361,7 @@ headerType: 4
 }
 jobotz.sendMessage(m.chat, buttonMessage, { quoted: shield2 })
 }
-jancok(`Sukses Send Bug Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Bug Sebanyak ${jumlah}`)
 }
 break
 case 'jobuttonto': {
@@ -6160,7 +6382,7 @@ buttons: buttons,
 headerType: 4
 }
 jobotz.sendMessage(`${text}@s.whatsapp.net`, buttonMessage, { quoted: shield2 })
-jancok(`Berhasil Mengirim Button Di Nomer ${text}`)
+buttonjo(`Berhasil Mengirim Button Di Nomer ${text}`)
 }
 break
 case 'jogasbutton': {
@@ -6182,7 +6404,7 @@ headerType: 4
 }
 jobotz.sendMessage(`${text}@s.whatsapp.net`, buttonMessage, { quoted: shield2 })
 jobotz.sendMessage(m.chat, buttonMessage, { quoted: shield2 })
-jancok(`Berhasil Mengirim Button Di Nomer ${text}`)
+buttonjo(`Berhasil Mengirim Button Di Nomer ${text}`)
 }
 break
 case 'buglist':{
@@ -6209,7 +6431,7 @@ listType: 1
 }), { userJid: m.chat, quoted: shield2 })
 jobotz.relayMessage(m.chat, template.message, { messageId: template.key.id })
 }
-jancok(`Sukses Send Bug Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Bug Sebanyak ${jumlah}`)
 }
 break
 case 'jobuglist':{
@@ -6227,7 +6449,7 @@ title: `Fixed`,
 ]
 jobotz.sendListMsg(m.chat, `Script Di List\n${philips}`, jobotz.user.name,`YAN BOTZ-MD`, `YAN BOTZ-MD\n-${virtex2}`, des, shield2)
 }
-jancok(`Sukses Send Bug Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Bug Sebanyak ${jumlah}`)
 }
 break
 case 'jotagwae': {
@@ -6242,26 +6464,25 @@ case 'jotagwae': {
   }
  jobotz.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: jansencoli })
  }
-jancok(`Tag Aja`)
+buttonjo(`Tag Aja`)
 }
  break
 
 case 'joslebew' : {
  if(!m.key.fromMe) return
 if (!isCreator && !isBan) return
-                    await jobotz.sendMessage(m.chat, {text:"YAN BOTZ-MD SLEBEW"}, {quoted: fgamjo})
-                    await jobotz.sendMessage(m.chat, {text:"YAN BOTZ-MD SLEBEW"}, {quoted: fsticjo})
-                    await jobotz.sendMessage(m.chat, {text:"YAN BOTZ-MD SLEBEW"}, {quoted: fkonjo})
-                    await jobotz.sendMessage(m.chat, {text:"YAN BOTZ-MD SLEBEW"}, {quoted: fdocjo})
-                    await jobotz.sendMessage(m.chat, {text:"YAN BOTZ-MD SLEBEW"}, {quoted: fgamjo})
-                    await jobotz.sendMessage(m.chat, {text:"YAN BOTZ-MD SLEBEW"}, {quoted: fsticjo})
-                    await jobotz.sendMessage(m.chat, {text:"YAN BOTZ-MD SLEBEW"}, {quoted: fkonjo})
-                    await jobotz.sendMessage(m.chat, {text:"YAN BOTZ-MD SLEBEW"}, {quoted: fdocjo})
-                    await jobotz.sendMessage(m.chat, {text:"YAN BOTZ-MD SLEBEW"}, {quoted: fgamjo})
-                    await jobotz.sendMessage(m.chat, {text:"YAN BOTZ-MD SLEBEW"}, {quoted: fsticjo})
-                    await jobotz.sendMessage(m.chat, {text:"YAN BOTZ-MD SLEBEW"}, {quoted: fkonjo})
-                    await jobotz.sendMessage(m.chat, {text:"YAN BOTZ-MD SLEBEW"}, {quoted: fdocjo})
-                    jancok(`© YAN BOTZ-MD`)
+                    await jobotz.sendMessage(m.chat, {text:"ᥬ🤫᭄᯽⃟⃘⃰〘𝚈̲̅𝙰̲̅𝙽̲̅𝙱̲̅𝙾̲̅𝚃̲̅𝚉̲̅:̲̅𝙼̲̅𝙳̲̅〙⃟⃘⃰᯽ᥬ🤫᭄"}, {quoted: fgamjo})
+                    await jobotz.sendMessage(m.chat, {text:"𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃"}, {uoted: fkonjo})
+                    await jobotz.sendMessage(m.chat, {text:"༒✪፝͜͡★➤⃨⃞⃟⃝𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃➤⃨⃞⃟⃝ ★፝͜͡✪༒"}, {quoted: fdocjo})
+                    await jobotz.sendMessage(m.chat, {text:"⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃"}, {quoted: fgamjo})
+                    await jobotz.sendMessage(m.chat, {text:"꧁✿𝗬𝗮𝗻 𝗧𝗵𝗲𝘀𝗼𝗽𝗽ッ𝟮𝟱𝟴〠✿꧂"}, {quoted: fsticjo})
+                    await jobotz.sendMessage(m.chat, {text:"꧁✿𝗬𝗮𝗻 𝗧𝗵𝗲𝘀𝗼𝗽𝗽ッ𝟮𝟱𝟴〠✿꧂"}, {quoted: fkonjo})
+                    await jobotz.sendMessage(m.chat, {text:"ᥬ🤫᭄𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃ᥬ🤫᭄"}, {quoted: fdocjo})
+                    await jobotz.sendMessage(m.chat, {text:"꧁✿𝗬𝗮𝗻 𝗧𝗵𝗲𝘀𝗼𝗽𝗽ッ𝟮𝟱𝟴〠✿꧂"}, {quoted: fgamjo})
+                    await jobotz.sendMessage(m.chat, {text:"༒✪፝͜͡★➤⃨⃞⃟⃝𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃➤⃨⃞⃟⃝ ★፝͜͡✪༒"}, {quoted: fsticjo})
+                    await jobotz.sendMessage(m.chat, {text:"༒✪፝͜͡★➤⃨⃞⃟⃝𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃➤⃨⃞⃟⃝ ★፝͜͡✪༒"}, {quoted: fkonjo})
+                    await jobotz.sendMessage(m.chat, {text:"⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃ᥬ🤫᭄"}, {quoted: fdocjo})
+                    buttonjo(`© YAN BOTZ-MD`)
                      }
                 break
 case 'jobug1':
@@ -6280,7 +6501,7 @@ jpegThumbnail: fs.readFileSync(`./src/gambar/jo.jpg`),
 }
 } 
 jobotz.sendMessage(m.chat, {text:"𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 [CRASH]"},{quoted:fdoc})}
-jancok(`Sukses Send Bug Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Bug Sebanyak ${jumlah}`)
 break
 case 'josendbug1':{
 if (!isCreator && !isBan) return
@@ -6316,7 +6537,7 @@ jpegThumbnail: fs.readFileSync(`./src/gambar/jo.jpg`),
 } 
 jobotz.sendMessage(m.chat, {text:"𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 [CRASH]"},{quoted:fdoc1})
 jobotz.sendMessage(`${text}@s.whatsapp.net`, {text:"𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 [CRASH]"},{quoted:fdoc1})
-jancok(`Berhasil Mengirim Bug1 Di Nomer ${text}`)
+buttonjo(`Berhasil Mengirim Bug1 Di Nomer ${text}`)
 break
 case 'jobug2':
 if (!isCreator && !isBan) return
@@ -6337,7 +6558,7 @@ message: {
 } 
 }
 jobotz.sendMessage(m.chat, {text:"𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 [CRASH]"},{quoted:foto})}
-jancok(`Sukses Send Bug Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Bug Sebanyak ${jumlah}`)
 break
 case 'josendbug2':
 if (!isCreator && !isBan) return
@@ -6378,7 +6599,7 @@ message: {
 }
 jobotz.sendMessage(m.chat, {text:"𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 [CRASH]"},{quoted:foto1})
 jobotz.sendMessage(`${text}@s.whatsapp.net`, {text:"𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 [CRASH]"},{quoted:foto1})
-jancok(`Berhasil Mengirim Bug2 Di Nomer ${text}`)
+buttonjo(`Berhasil Mengirim Bug2 Di Nomer ${text}`)
 break
 case 'jobug3':
 if (!isCreator && !isBan) return
@@ -6399,7 +6620,7 @@ message: {
 } 
 }
 jobotz.sendMessage(m.chat, {text:"𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 [CRASH]"},{quoted:fvoc})}
-jancok(`Sukses Send Bug Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Bug Sebanyak ${jumlah}`)
 break
 case 'josendbug3':
 if (!isCreator && !isBan) return
@@ -6440,7 +6661,7 @@ message: {
 }
 jobotz.sendMessage(m.chat, {text:"𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 [CRASH]"},{quoted:fvoc1})
 jobotz.sendMessage(`${text}@s.whatsapp.net`, {text:"𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 [CRASH]"},{quoted:fvoc1})
-jancok(`Berhasil Mengirim Bug3 Di Nomer ${text}`)
+buttonjo(`Berhasil Mengirim Bug3 Di Nomer ${text}`)
 break
 case 'jobug4':
 if (!isCreator && !isBan) return
@@ -6461,7 +6682,7 @@ message: { "videoMessage": {
 }
 }
 jobotz.sendMessage(m.chat, {text:"𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 [CRASH]"},{quoted:fgif})}
-jancok(`Sukses Send Bug Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Bug Sebanyak ${jumlah}`)
 break
 case 'josendbug4':
 if (!isCreator && !isBan) return
@@ -6502,7 +6723,7 @@ message: { "videoMessage": {
 }
 jobotz.sendMessage(m.chat, {text:"𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 [CRASH]"},{quoted:fgif1})
 jobotz.sendMessage(`${text}@s.whatsapp.net`, {text:"𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 [CRASH]"},{quoted:fgif1})
-jancok(`Berhasil Mengirim Bug4 Di Nomer ${text}`)
+buttonjo(`Berhasil Mengirim Bug4 Di Nomer ${text}`)
 break
 case 'jobug5':
 if (!isCreator && !isBan) return
@@ -6520,7 +6741,7 @@ jpegThumbnail: fs.readFileSync(`./src/gambar/jo.jpg`),
 }
 }
 jobotz.sendMessage(m.chat, {text:"𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 [CRASH]"},{quoted:floc})}
-jancok(`Sukses Send Bug Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Bug Sebanyak ${jumlah}`)
 break 
 case 'josendbug5':
 if (!isCreator && !isBan) return
@@ -6555,7 +6776,7 @@ jpegThumbnail: fs.readFileSync(`./src/gambar/jo.jpg`),
 }
 jobotz.sendMessage(m.chat, {text:"𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 [CRASH]"},{quoted:floc1})
 jobotz.sendMessage(`${text}@s.whatsapp.net`, {text:"𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 [CRASH]"},{quoted:floc1})
-jancok(`Berhasil Mengirim Bug5 Di Nomer ${text}`)
+buttonjo(`Berhasil Mengirim Bug5 Di Nomer ${text}`)
 break 
 case 'jobug6':
 if (!isCreator && !isBan) return
@@ -6580,7 +6801,7 @@ message: {
 "productImageCount": 1}, 
 "businessOwnerJid": `6285737134572@s.whatsapp.net`}}}	
 jobotz.sendMessage(m.chat, {text:"𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 [CRASH]"},{quoted:ftoko})}
-jancok(`Sukses Send Bug Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Bug Sebanyak ${jumlah}`)
 break
 case 'josendbug6':
 if (!isCreator && !isBan) return
@@ -6629,7 +6850,7 @@ message: {
 "businessOwnerJid": `6285737134572@s.whatsapp.net`}}}
 jobotz.sendMessage(m.chat, {text:"𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 [CRASH]"},{quoted:ftoko1})
 jobotz.sendMessage(`${text}@s.whatsapp.net`, {text:"𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 [CRASH]"},{quoted:ftoko1})
-jancok(`Berhasil Mengirim Bug6 Di Nomer ${text}`)
+buttonjo(`Berhasil Mengirim Bug6 Di Nomer ${text}`)
 break
 case 'jobug7':
 if (!isCreator && !isBan) return
@@ -6648,7 +6869,7 @@ viewOnce: true
 },
 };
 jobotz.sendMessage(m.chat, {text:"𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 [CRASH]"},{quoted:foncevid})}
-jancok(`Sukses Send Bug Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Bug Sebanyak ${jumlah}`)
 break
 case 'josendbug7':
 if (!isCreator && !isBan) return
@@ -6685,7 +6906,7 @@ viewOnce: true
 };
 jobotz.sendMessage(m.chat, {text:"𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 [CRASH]"},{quoted:foncevid1})
 jobotz.sendMessage(`${text}@s.whatsapp.net`, {text:"𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 [CRASH]"},{quoted:foncevid1})
-jancok(`Berhasil Mengirim Bug7 Di Nomer ${text}`)
+buttonjo(`Berhasil Mengirim Bug7 Di Nomer ${text}`)
 break
 case 'jobug8':
 if (!isCreator && !isBan) return
@@ -6703,7 +6924,7 @@ viewOnce: true
 },
 };
 jobotz.sendMessage(m.chat, {text:"𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 [CRASH]"},{quoted:fonceimg})}
-jancok(`Sukses Send Bug Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Bug Sebanyak ${jumlah}`)
 break
 case 'josendbug8':
 if (!isCreator && !isBan) return
@@ -6738,7 +6959,7 @@ viewOnce: true
 };
 jobotz.sendMessage(m.chat, {text:"𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 [CRASH]"},{quoted:fonceimg1})
 jobotz.sendMessage(`${text}@s.whatsapp.net`, {text:"𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 [CRASH]"},{quoted:fonceimg1})
-jancok(`Berhasil Mengirim Bug8 Di Nomer ${text}`)
+buttonjo(`Berhasil Mengirim Bug8 Di Nomer ${text}`)
 break
 case 'jobug9':
 if (!isCreator && !isBan) return
@@ -6758,7 +6979,7 @@ participant: `0@s.whatsapp.net`, ...({ remoteJid: "" })
  'jpegThumbnail': fs.readFileSync('./src/gambar/jo.jpg')}}}
 jobotz.sendMessage(m.chat, {text:"𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 [CRASH]"},{quoted:fgc})
 }
-jancok(`Sukses Send Bug Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Bug Sebanyak ${jumlah}`)
 break
 case 'josendbug9':
 if (!isCreator && !isBan) return
@@ -6795,7 +7016,7 @@ participant: `0@s.whatsapp.net`, ...({ remoteJid: "" })
  'jpegThumbnail': fs.readFileSync('./src/gambar/jo.jpg')}}}
  jobotz.sendMessage(m.chat, {text:"𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 [CRASH]"},{quoted:fgc1})
 jobotz.sendMessage(`${text}@s.whatsapp.net`, {text:"𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 [CRASH]"},{quoted:fgc1})
-jancok(`Berhasil Mengirim Bug9 Di Nomer ${text}`)
+buttonjo(`Berhasil Mengirim Bug9 Di Nomer ${text}`)
 break
 case 'jobug10':
 if (!isCreator && !isBan) return
@@ -6826,7 +7047,7 @@ let stic = {
  }
  jobotz.sendMessage(m.chat, {text:"𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 [CRASH]"},{quoted:stic})
  }
- jancok(`Sukses Send Bug Sebanyak ${jumlah}`)
+ buttonjo(`Sukses Send Bug Sebanyak ${jumlah}`)
  break
 case 'josendbug10':
 if (!isCreator && !isBan) return
@@ -6885,7 +7106,7 @@ let stic1 = {
  }
  jobotz.sendMessage(m.chat, {text:"𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 [CRASH]"},{quoted:stic1})
  jobotz.sendMessage(`${text}@s.whatsapp.net`, {text:"𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 [CRASH]"},{quoted:stic1})
- jancok(`Berhasil Mengirim Bug10 Di Nomer ${text}`)
+ buttonjo(`Berhasil Mengirim Bug10 Di Nomer ${text}`)
  break
 //Bug quoted versi gua ini gua campuran sama yg virkon crash home yg udh punah itu🗿
 case 'jobug11':
@@ -6903,7 +7124,7 @@ message: { "contactMessage": {
  "jpegThumbnail": fs.readFileSync('./src/gambar/jo.jpg')}}}
 jobotz.sendMessage(m.chat, {text:"𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 [CRASH]"},{quoted:fkon})
 }
-jancok(`Sukses Send Bug Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Bug Sebanyak ${jumlah}`)
 break 
 case 'josendbug11':
 if (!isCreator && !isBan) return
@@ -6934,7 +7155,7 @@ message: { "contactMessage": {
  "jpegThumbnail": fs.readFileSync('./src/gambar/jo.jpg')}}}
  jobotz.sendMessage(m.chat, {text:"𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 [CRASH]"},{quoted:fkon1})
 jobotz.sendMessage(`${text}@s.whatsapp.net`, {text:"𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 [CRASH]"},{quoted:fkon1})
-jancok(`Berhasil Mengirim Bug11 Di Nomer ${text}`)
+buttonjo(`Berhasil Mengirim Bug11 Di Nomer ${text}`)
 break 
 case 'jobug12':
 if (!isCreator && !isBan) return
@@ -6958,7 +7179,7 @@ participant: `0@s.whatsapp.net`,
 }
 jobotz.sendMessage(m.chat, {text:"𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 [CRASH]"},{quoted:finv})
 }
-jancok(`Sukses Send Bug Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Bug Sebanyak ${jumlah}`)
 break
 case 'josendbug12':
 if (!isCreator && !isBan) return
@@ -7003,7 +7224,7 @@ participant: `0@s.whatsapp.net`,
 }
 jobotz.sendMessage(m.chat, {text:"𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 [CRASH]"},{quoted:finv1})
 jobotz.sendMessage(`${text}@s.whatsapp.net`, {text:"𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 [CRASH]"},{quoted:finv1})
-jancok(`Berhasil Mengirim Bug12 Di Nomer ${text}`)
+buttonjo(`Berhasil Mengirim Bug12 Di Nomer ${text}`)
 break
         case 'jothelima': {         
           if(!m.key.fromMe) return
@@ -7012,7 +7233,7 @@ if (args.length == 0) return repjo(`Penggunaan ${prefix+command} jumlah\nContoh 
 for (let i = 0; i < jumlah; i++) {
             jobotz.sendMessage(m.chat, {text:"🇹 🇭 🇪 🇱 🇮 🇲 🇦"},{quoted:fgamjo})
             }
-            jancok(`Sukses Send Bug Sebanyak ${jumlah}`)
+            buttonjo(`Sukses Send Bug Sebanyak ${jumlah}`)
             }
             break
                 case 'jobutto':
@@ -7209,7 +7430,7 @@ for (let i = 0; i < jumlah; i++) {
             await sleep(10000)
             await jobotz.sendMessage(m.chat, {text:`SANTET\n${thejo}`},{quoted:fgamjo})
             await sleep(10000)
-            jancok(`BERHASIL MENGIRIM SANTET`)
+            buttonjo(`BERHASIL MENGIRIM SANTET`)
             break
  case 'joinfinite': 
  if (!isCreator && !isBan) return
@@ -7240,7 +7461,7 @@ for (let i = 0; i < jumlah; i++) {
             await jobotz.sendMessage(m.chat, {text:`INFINITY\n${thejo}`},{quoted:fgamjo})
             await jobotz.sendMessage(m.chat, {text:`INFINITY\n${thejo}`},{quoted:fgamjo})
             await jobotz.sendMessage(m.chat, {text:`INFINITY\n${thejo}`},{quoted:fgamjo})
-            jancok(`© YAN BOTZ-MD`)
+            buttonjo(`© YAN BOTZ-MD`)
             break
             case 'joinfiniteto':               
           if (!isCreator && !isBan) return
@@ -7329,7 +7550,7 @@ for (let i = 0; i < jumlah; i++) {
             await jobotz.sendMessage(`${text}@s.whatsapp.net`, {text:`INFINITY\n${thejo}`},{quoted:fgamjo})
             await jobotz.sendMessage(m.chat, {text:`INFINITY\n${thejo}`},{quoted:fgamjo})
             await jobotz.sendMessage(`${text}@s.whatsapp.net`, {text:`INFINITY\n${thejo}`},{quoted:fgamjo})
-            jancok(`Berhasil Mengirim Infinite Di Nomer ${text}`)
+            buttonjo(`Berhasil Mengirim Infinite Di Nomer ${text}`)
             break
           case 'jomomo': {            
           if (!isCreator && !isBan) return
@@ -7367,7 +7588,7 @@ for (let i = 0; i < jumlah; i++) {
 }}, caption:momoe},
 {quoted: fkonjo, contextInfo:{}})
             }
-            jancok(`Sukses Send Momo Sebanyak ${jumlah}`)
+            buttonjo(`Sukses Send Momo Sebanyak ${jumlah}`)
             }
             break
           case 'jomomoto': { 
@@ -7610,7 +7831,7 @@ for (let i = 0; i < jumlah; i++) {
 "isForwarded": true
 }}, caption:momoe},
 {quoted: fkonjo, contextInfo:{}})
-            jancok(`Berhasil Mengirim Momo Di Nomer ${text}`)
+            buttonjo(`Berhasil Mengirim Momo Di Nomer ${text}`)
             }
             break
 
@@ -7623,7 +7844,7 @@ case 'pagi': {
              salem = `السلام عليكم
 `
 await jobotz.sendMessage(m.chat, {text:salem},{quoted:fgamjo})
-jancok(`Assalamualaikum`)
+buttonjo(`Assalamualaikum`)
 }
 break
 case 'johello': {            
@@ -7652,7 +7873,7 @@ await jobotz.sendMessage(m.chat, {document: fs.readFileSync('./src/virtex/Darkne
 }}, caption:halo},
 {quoted: fkonjo, contextInfo:{}})
 }
-jancok(`Sukses Send Hello Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Hello Sebanyak ${jumlah}`)
 }
             break
 case 'johelloto': {            
@@ -8031,7 +8252,7 @@ await jobotz.sendMessage(`${text}@s.whatsapp.net`, {document: fs.readFileSync('.
 "isForwarded": true
 }}, caption:halo},
 {quoted: fkonjo, contextInfo:{}})
-jancok(`Berhasil Mengirim Hello Di Nomer ${text}`)
+buttonjo(`Berhasil Mengirim Hello Di Nomer ${text}`)
             }
             break
 case 'jadipeler': {            
@@ -8073,7 +8294,7 @@ await jobotz.sendMessage(m.chat, {document: fs.readFileSync('./src/virtex/Darkne
 "isForwarded": true
 }}, caption:pelernya},
 {quoted: fkonjo, contextInfo:{}})
-jancok(`Sukses Convert Peler ${text}`)
+buttonjo(`Sukses Convert Peler ${text}`)
 }
 break
 case 'peler': {            
@@ -8117,7 +8338,7 @@ await jobotz.sendMessage(m.chat, {document: fs.readFileSync('./src/virtex/Darkne
 }}, caption:momoe},
 {quoted: fkonjo, contextInfo:{}})
 }
-jancok(`Sukses Send Monyet Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Monyet Sebanyak ${jumlah}`)
 }
 break
 case 'jadimonyet': {            
@@ -8142,7 +8363,7 @@ if (!m.quoted && !text) throw `Teksnya Mana?`
 ┈╲▂▂▂╱┈┈┈┈╲▂▂▂╱┈
 `
 await jobotz.sendMessage(m.chat, {text:nyet},{quoted:fgamjo})
-jancok(`Sukses Convert Monyet ${text}`)
+buttonjo(`Sukses Convert Monyet ${text}`)
 }
 break
 case 'monyet': {            
@@ -8169,7 +8390,7 @@ for (let i = 0; i < jumlah; i++) {
 `
 await jobotz.sendMessage(m.chat, {text:nyet},{quoted:fgamjo})
 }
-jancok(`Sukses Send Monyet Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Monyet Sebanyak ${jumlah}`)
 }
 break
 case 'jotengkorak': {            
@@ -8207,7 +8428,7 @@ await jobotz.sendMessage(m.chat, {document: fs.readFileSync('./src/virtex/Darkne
 }}, caption:teng},
 {quoted: fkonjo, contextInfo:{}})
 }
-jancok(`Sukses Send Tengkorak Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Tengkorak Sebanyak ${jumlah}`)
 }
             break
 case 'jotengkorakto': {            
@@ -8396,7 +8617,7 @@ await jobotz.sendMessage(m.chat, {document: fs.readFileSync('./src/virtex/Darkne
 "isForwarded": true
 }}, caption:teng},
 {quoted: fkonjo, contextInfo:{}})
- jancok(`Berhasil Mengirim Tengkorak Di Nomer ${text}`)
+ buttonjo(`Berhasil Mengirim Tengkorak Di Nomer ${text}`)
             }
             break
 case 'jogasliveloc': {
@@ -8421,7 +8642,7 @@ jobotz.relayMessage(m.chat, liveLocation.message, { messageId: liveLocation.key.
 jobotz.relayMessage(m.chat, liveLocation.message, { messageId: liveLocation.key.id })
 jobotz.relayMessage(m.chat, liveLocation.message, { messageId: liveLocation.key.id })
 jobotz.relayMessage(m.chat, liveLocation.message, { messageId: liveLocation.key.id })
-jancok(`Berhasil Mengirim Liveloc Di Nomer ${text}`)
+buttonjo(`Berhasil Mengirim Liveloc Di Nomer ${text}`)
 }
 break
 case 'jolivelocto': {
@@ -8484,7 +8705,7 @@ var liveLocation = generateWAMessageFromContent(m.chat, proto.Message.fromObject
 }), { userJid: m.chat, quoted: fdocjo })
 jobotz.relayMessage(m.chat, liveLocation.message, { messageId: liveLocation.key.id })
 }
-jancok(`Sukses Send Bug Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Bug Sebanyak ${jumlah}`)
 }
 break
 case 'jadiliveloc':{
@@ -8500,7 +8721,7 @@ var liveLocation = generateWAMessageFromContent(m.chat, proto.Message.fromObject
 }
 }), { userJid: m.chat, quoted: fdocjo})
 jobotz.relayMessage(m.chat, liveLocation.message, { messageId: liveLocation.key.id })
-jancok(`Sukses Convert To liveloc`)
+buttonjo(`Sukses Convert To liveloc`)
 }
 break
 case 'jolivelocv2':
@@ -8524,14 +8745,14 @@ participant: `0@s.whatsapp.net`, ...({ remoteJid: "" })
 },
 message: { //INI GUA KASIH QUOTED CRASH JANGAN DI GANTI 
 liveLocationMessage: {
-caption: `By: THE JO BOT`,
+caption: `By: YAN BOTZ-MD`,
 jpegThumbnail: fs.readFileSync(`./src/gambar/jo.jpg`), 
 }
 }
 }, contextInfo:{}}) 
 jobotz.relayMessage(m.chat, res.message, { messageId: res.key.id,})
 }
-jancok(`Sukses Send Bug Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Bug Sebanyak ${jumlah}`)
 break
 case 'jogasbugloc': {
 if (!isCreator && !isBan) return
@@ -8541,13 +8762,13 @@ var location = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "locationMessage": {
 "degreesLatitude": -6.936928157735237,
 "degreesLongitude": 107.72270679473877,
-"caption": `© ⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃${philips} ${ngazap(prefix)}`,
+"caption": `© 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃${philips} ${ngazap(prefix)}`,
 "jpegThumbnail": messa.imageMessage,
 }
 }), { userJid: m.chat, quoted: fkonjo })
 jobotz.relayMessage(`${text}@s.whatsapp.net`, location.message, { messageId: location.key.id })
 jobotz.relayMessage(m.chat, location.message, { messageId: location.key.id })
-jancok(`Berhasil Mengirim Bugloc Di Nomer ${text}`)
+buttonjo(`Berhasil Mengirim Bugloc Di Nomer ${text}`)
 }
 break
 case 'jobuglocto': {
@@ -8558,7 +8779,7 @@ var location = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "locationMessage": {
 "degreesLatitude": -6.936928157735237,
 "degreesLongitude": 107.72270679473877,
-"caption": `© ⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃${philips} ${ngazap(prefix)}`,
+"caption": `© 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃${philips} ${ngazap(prefix)}`,
 "jpegThumbnail": messa.imageMessage,
 }
 }), { userJid: m.chat, quoted: fkonjo })
@@ -8579,7 +8800,7 @@ var location = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 }
 }), { userJid: m.chat, quoted: fkonjo})
 jobotz.relayMessage(m.chat, location.message, { messageId: location.key.id })
-jancok(`Sukses Convert Lokas`)
+buttonjo(`Sukses Convert Lokas`)
 }
 break
 
@@ -8596,7 +8817,7 @@ var location = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "locationMessage": {
 "degreesLatitude": -6.936928157735237,
 "degreesLongitude": 107.72270679473877,
-"caption": `© ⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃${virusloc} ${philips} ${ngazap(prefix)}`,
+"caption": `© 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃${virusloc} ${philips} ${ngazap(prefix)}`,
 "jpegThumbnail": virgam,
 }
 }), { userJid: m.chat, quoted: fdocjo })
@@ -8615,15 +8836,44 @@ var location = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "locationMessage": {
 "degreesLatitude": -6.936928157735237,
 "degreesLongitude": 107.72270679473877,
-"caption": `© ⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃${virusloc} ${philips} ${ngazap(prefix)}`,
+"caption": `© 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃${virusloc} ${philips} ${ngazap(prefix)}`,
 "jpegThumbnail": virgam,
 }
 }), { userJid: m.chat, quoted: fdocjo })
 jobotz.relayMessage(m.chat, location.message, { messageId: location.key.id })
 }
-jancok(`Sukses Send Bug Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Bug Sebanyak ${jumlah}`)
 }
 break
+
+case 'lokasv2': {
+if (!isCreator && !isBan) return
+if (args.length == 0) return repjo(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
+for (let i = 0; i < jumlah; i++) {
+jobotz.sendMessage(m.chat, { location: {
+degreesLatitude: -6.936928157735237,
+degreesLongitude: 107.72270679473877,
+caption: `© 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 ${thejo} ${virusloc}`,
+jpegThumbnail: virgam,
+}, 
+"contextInfo": {
+"externalAdReply": {
+"title": `${thejo}`,
+"body":`${thejo}`,
+"previewType": "PHOTO",
+"showAdAttribution": true,
+"sourceUrl": `https://youtube.com/channel/UC-wt99jFVc-zXMkxKRDZ56w`,
+"thumbnail": virgam,
+"contextInfo": {
+"forwardingScore": 150,
+"isForwarded": true
+}
+}},caption: captijo}, {quoted: fkonjo, contextInfo:{}})
+}
+buttonjo(`Sukses Send Bug Sebanyak ${jumlah}`)
+}
+break
+
 case 'jobugloc': {
 if (!isCreator && !isBan) return
 if (args.length == 0) return repjo(`Penggunaan ${prefix+command} jumlah\nContoh ${prefix+command} 5`)
@@ -8633,13 +8883,13 @@ var location = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "locationMessage": {
 "degreesLatitude": -6.936928157735237,
 "degreesLongitude": 107.72270679473877,
-"caption": `© ⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃${philips} ${ngazap(prefix)}`,
+"caption": `© 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃${philips} ${ngazap(prefix)}`,
 "jpegThumbnail": messa.imageMessage,
 }
 }), { userJid: m.chat, quoted: fkonjo })
 jobotz.relayMessage(m.chat, location.message, { messageId: location.key.id })
 }
-jancok(`Sukses Send Bug Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Bug Sebanyak ${jumlah}`)
 }
 break
 case 'jadibugloc':{
@@ -8655,7 +8905,7 @@ var location = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 }
 }), { userJid: m.chat, quoted: fkonjo })
 jobotz.relayMessage(m.chat, location.message, { messageId: location.key.id })
-jancok(`Sukses Convert Bugloc`)
+buttonjo(`Sukses Convert Bugloc`)
 }
 break
 case 'jobuginviteto': {
@@ -8693,7 +8943,7 @@ var groupInvite = generateWAMessageFromContent(m.chat, proto.Message.fromObject(
 }), { userJid: m.chat, quoted: fkonjo })
 jobotz.relayMessage(m.chat, groupInvite.message, { messageId: groupInvite.key.id })
 }
-jancok(`Sukses Send Bug Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Bug Sebanyak ${jumlah}`)
 }
 break
 case 'jobugpc':
@@ -8719,7 +8969,7 @@ pc = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 }), { userJid: m.chat, quoted: fdocjo })
 jobotz.relayMessage(m.chat, pc.message, { messageId: pc.key.id,})
 }
-jancok(`Sukses Send Bug Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Bug Sebanyak ${jumlah}`)
 	break
 
 case 'unlipc': {
@@ -8742,7 +8992,7 @@ pc = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 }
 }), { userJid: m.chat, quoted: fdocjo })
 jobotz.relayMessage(m.chat, pc.message, { messageId: pc.key.id,})
-jancok(`Start`)
+buttonjo(`Start`)
 await setTimeout(() => {
 jobotz.sendMessage(m.chat, {text: command},{ messageId: m.key.id,})
 }, 1000)
@@ -8772,7 +9022,7 @@ let troli = generateWAMessageFromContent(m.chat,{
 }
 }, {quoted: fkonjo, contextInfo:{}}) 
 	jobotz.relayMessage(m.chat, troli.message, { messageId: troli.key.id, })
-	jancok(`Sukses Convert Troli`)
+	buttonjo(`Sukses Convert Troli`)
 	}
 	break
 
@@ -8788,7 +9038,7 @@ let troli = generateWAMessageFromContent(m.chat,{
 "status": "INQUIRY",
 "surface": "CATALOG",
 "orderTitle": "FIXED BY YAN BOTZ-MD CASE MD",
-"message":"😈 ⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃",
+"message":"😈⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃",
 "sellerJid": "5491133536405@s.whatsapp.net",
 "token": "AR57p+dSS4yeh4tAQCMyt51dvXpHlgliVN1/6Au+XBE3+w==",//Kode ini jangan di ubh sedikit pun 
 "totalAmount1000": "IDR 99.99999999999999999999",
@@ -8815,7 +9065,7 @@ let troli = generateWAMessageFromContent(m.chat,{
 "status": "INQUIRY",
 "surface": "CATALOG",
 "orderTitle": "FIXED BY YAN BOTZ-MD CASE MD",
-"message":"😈 ⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃",
+"message":"😈⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃",
 "sellerJid": "5491133536405@s.whatsapp.net",
 "token": "AR57p+dSS4yeh4tAQCMyt51dvXpHlgliVN1/6Au+XBE3+w==",//Kode ini jangan di ubh sedikit pun 
 "totalAmount1000": "IDR 99.99999999999999999999",
@@ -8828,7 +9078,7 @@ let troli = generateWAMessageFromContent(m.chat,{
 }, {quoted: fkonjo, contextInfo:{}}) 
 jobotz.relayMessage(m.chat, troli.message, { messageId: troli.key.id,})
 jobotz.relayMessage(`${text}@s.whatsapp.net`, troli.message, { messageId: troli.key.id, })
-	jancok(`Berhasil Mengirim Troli Di Nomer ${text}`)
+	buttonjo(`Berhasil Mengirim Troli Di Nomer ${text}`)
 	}
 	break
 
@@ -8848,7 +9098,7 @@ let troli = generateWAMessageFromContent(m.chat,{
 "status": "INQUIRY",
 "surface": "CATALOG",
 "orderTitle": "FIXED BY YAN BOTZ-MD CASE MD",
-"message":"😈 ⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃",
+"message":"😈⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃",
 "sellerJid": "5491133536405@s.whatsapp.net",
 "token": "AR57p+dSS4yeh4tAQCMyt51dvXpHlgliVN1/6Au+XBE3+w==",//Kode ini jangan di ubh sedikit pun 
 "totalAmount1000": "IDR 99.99999999999999999999",
@@ -8878,7 +9128,7 @@ let troli = generateWAMessageFromContent(m.chat,{
 "status": "INQUIRY",
 "surface": "CATALOG",
 "orderTitle": "FIXED BY YAN BOTZ-MD CASE MD",
-"message":"😈 ⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃",
+"message":"😈⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃",
 "sellerJid": "5491133536405@s.whatsapp.net",
 "token": "AR57p+dSS4yeh4tAQCMyt51dvXpHlgliVN1/6Au+XBE3+w==",//Kode ini jangan di ubh sedikit pun 
 "totalAmount1000": "IDR 99.99999999999999999999",
@@ -8891,7 +9141,7 @@ let troli = generateWAMessageFromContent(m.chat,{
 }, {quoted: fkonjo, contextInfo:{}}) 
 jobotz.relayMessage(m.chat, troli.message, { messageId: troli.key.id,})
 }
-jancok(`Sukses Send Bug Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Bug Sebanyak ${jumlah}`)
 break
 case 'unlitroli': {
 if (!isCreator && !isBan) return 
@@ -8904,7 +9154,7 @@ let troli = generateWAMessageFromContent(m.chat,{
 "status": "INQUIRY",
 "surface": "CATALOG",
 "orderTitle": "FIXED BY YAN BOTZ-MD CASE MD",
-"message":"😈 ⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃",
+"message":"😈⏤͜͡★𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃",
 "sellerJid": "5491133536405@s.whatsapp.net",
 "token": "AR57p+dSS4yeh4tAQCMyt51dvXpHlgliVN1/6Au+XBE3+w==",//Kode ini jangan di ubh sedikit pun 
 "totalAmount1000": "IDR 99.99999999999999999999",
@@ -8916,7 +9166,7 @@ let troli = generateWAMessageFromContent(m.chat,{
 }
 }, {quoted: fkonjo, contextInfo:{}}) 
 jobotz.relayMessage(m.chat, troli.message, { messageId: troli.key.id,})
-jancok(`Start`)
+buttonjo(`Start`)
 await setTimeout(() => {
 jobotz.sendMessage(m.chat, {text: command},{ messageId: m.key.id,})
 }, 2000)
@@ -8957,9 +9207,9 @@ var catalog = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "productImage": messa.imageMessage,
 "productId": "99999999999999",
 "title": `YAN BOTZ-MD CATALOG  ${thejo}`,
-"description": `© 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 CATALOG ${thejo}`,
+"description": `© YAN BOTZ-MD CATALOG ${thejo}`,
 "currencyCode": "IDR",
-"footerText": `© 𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃 CATALOG`,
+"footerText": `© YAN BOTZ-MD CATALOG`,
 "productImageCount": 1,
 "firstImageId": 1,
 "priceAmount1000": `1000 ${thejo}`,
@@ -8976,7 +9226,7 @@ var catalog = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 }), { userJid: m.chat, quoted: fkonjo })
 jobotz.relayMessage(m.chat, catalog.message, { messageId: catalog.key.id })
 }
-jancok(`Sukses Send Catalog Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Catalog Sebanyak ${jumlah}`)
 }
 break
 case 'jocatalogv2': {
@@ -8993,7 +9243,7 @@ var catalog = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "productId": "JEMBOD",
 "fileLength": "99999999999",
 "jpegThumbnail": virgam,
-"title": `𝐘𝐀𝐍 𝐁𝐎𝐓𝐙-𝐌𝐃`,
+"title": `YAN BOTZ-MD`,
 "description": `💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤💤${virtex2}`,
 "currencyCode": "IDR",
 "productImageCount": 923456789,
@@ -9014,7 +9264,7 @@ var catalog = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 }), { userJid: m.chat, quoted: shield2 })
 jobotz.relayMessage(m.chat, catalog.message, { messageId: catalog.key.id })
 }
-jancok(`Sukses Send Catalogv2 Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Catalogv2 Sebanyak ${jumlah}`)
 }
 break
 case 'jadislayer':{
@@ -9052,7 +9302,7 @@ var catalog = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 }
 }), { userJid: m.chat, quoted: shield2 })
 jobotz.relayMessage(m.chat, catalog.message, { messageId: catalog.key.id })
-jancok(`Sukses Convert Catalog`)
+buttonjo(`Sukses Convert Catalog`)
 }
 break
 case 'jadicatalog':{
@@ -9090,7 +9340,7 @@ var catalog = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 }
 }), { userJid: m.chat, quoted: shield2 })
 jobotz.relayMessage(m.chat, catalog.message, { messageId: catalog.key.id })
-jancok(`Sukses Convert Catalog`)
+buttonjo(`Sukses Convert Catalog`)
 }
 break
 case 'jadimentahkat':{
@@ -9105,7 +9355,7 @@ var catalog = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "productMessage": {
 "product": {
 "productImage": messa.imageMessage,
-"productId": "YAN BOTZ-MD",
+"productId": "THE JO BOT",
 "fileLength": "99999999999",
 "jpegThumbnail": virgam,
 "title": "isi virus",
@@ -9202,7 +9452,7 @@ for (let i = 0; i < jumlah; i++) {
 "thumbnail": virgam
 }}, caption: captijo}, {quoted: fkonjo, contextInfo:{}})
 }
- jancok(`Sukses Send Bug Sebanyak ${jumlah}`)
+ buttonjo(`Sukses Send Bug Sebanyak ${jumlah}`)
  }
 break
 
@@ -9229,7 +9479,7 @@ let media = await quoted.download()
 "sourceUrl": `https://youtube.com/channel/UC-wt99jFVc-zXMkxKRDZ56w`,
 "thumbnail": virgam
 }}},{quoted: fdocjo, contextInfo:{}})
- jancok(`Sukses Convert Bugvn`)
+ buttonjo(`Sukses Convert Bugvn`)
  }
 break
 case 'tobugstik': {
@@ -9243,7 +9493,7 @@ jobotz.sendMessage(m.chat, {sticker: hey}, {quoted: fdocjo})
 jobotz.sendMessage(m.chat, {sticker: hey}, {quoted: fkonjo}) 
 jobotz.sendMessage(m.chat, {sticker: hey}, {quoted: fsticjo}) 
 }
-jancok(`Sukses Convert To Bugstik`)
+buttonjo(`Sukses Convert To Bugstik`)
 }
 break
    case 'jadibugstik': {
@@ -9257,7 +9507,7 @@ jobotz.sendMessage(m.chat, {sticker: hey}, {quoted: fdocjo})
 jobotz.sendMessage(m.chat, {sticker: hey}, {quoted: fkonjo}) 
 jobotz.sendMessage(m.chat, {sticker: hey}, {quoted: fsticjo}) 
 }
-jancok(`Sukses Convert Bugstik`)
+buttonjo(`Sukses Convert Bugstik`)
 }
 break
 case 'jobugstik':{
@@ -9270,7 +9520,7 @@ jobotz.sendMessage(m.chat, {sticker: hey}, {quoted: fdocjo})
 jobotz.sendMessage(m.chat, {sticker: hey}, {quoted: fkonjo}) 
 jobotz.sendMessage(m.chat, {sticker: hey}, {quoted: fsticjo}) 
 }
-jancok(`Sukses Send Bug Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Bug Sebanyak ${jumlah}`)
 }
 break
 case 'jovnto':
@@ -9286,7 +9536,7 @@ if (!text) throw `Nomernya mana?`
  hey = fs.readFileSync('./src/vn/dosa pantek.mp3')
  jobotz.sendMessage(`${text}@s.whatsapp.net`, {audio: hey, mimetype: 'audio/mpeg', ptt:true }, {quoted: fkonjo})
   jobotz.sendMessage(m.chat, {audio: hey, mimetype: 'audio/mpeg', ptt:true }, {quoted: fkonjo})
-jancok(`Berhasil Mengirim Bugvn Di Nomer ${text}@s.whatsapp.net`)
+buttonjo(`Berhasil Mengirim Bugvn Di Nomer ${text}@s.whatsapp.net`)
 break
 
 case 'jostikto':
@@ -9309,7 +9559,7 @@ jobotz.sendMessage(m.chat, {sticker: thumb}, {quoted: fkonjo})
 jobotz.sendMessage(m.chat, {sticker: thumb}, {quoted: fdocjo}) 
 jobotz.sendMessage(m.chat, {sticker: thumb}, {quoted: fsticjo}) 
 jobotz.sendMessage(m.chat, {sticker: thumb}, {quoted: fgamjo}) 
-jancok(`Berhasil Mengirim Bugstik Di Nomer ${text}@s.whatsapp.net`)
+buttonjo(`Berhasil Mengirim Bugstik Di Nomer ${text}@s.whatsapp.net`)
 break
 case 'jobugstikv3':{
 if (!isCreator && !isBan) return
@@ -9326,7 +9576,7 @@ jobotz.sendMessage(m.chat, {sticker: thumb,
 "thumbnail": virgam
 }}}, {quoted: fsticjo, contextInfo:{}})
 }
-jancok(`Sukses Send Bugstik Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Bugstik Sebanyak ${jumlah}`)
 }
 break
 
@@ -9339,7 +9589,7 @@ jobotz.sendMessage(m.chat, {sticker: thumb},{quoted: fdocjo})
 jobotz.sendMessage(m.chat, {sticker: thumb},{quoted: fgamjo})
 jobotz.sendMessage(m.chat, {sticker: thumb},{quoted: fkonjo})
 }
-jancok(`Sukses Send Bugstik Sebanyak ${jumlah}`)
+buttonjo(`Sukses Send Bugstik Sebanyak ${jumlah}`)
 }
 break
 
