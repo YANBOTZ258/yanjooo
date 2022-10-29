@@ -301,7 +301,7 @@ jobotz.sendMessage(anu.id, buttonMessage)
         return status
     }
 	
-    jobotz.public = true
+    jobotz.public = false
 
     jobotz.serializeM = (m) => smsg(jobotz, m, store)
 
